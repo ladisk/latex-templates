@@ -1,2 +1,2 @@
 # latex-templates
-This are latex templates used at the Faculty of Mechanical Eng, University of Ljubljana
+LaTeX predloge za študente Fakultete za strojništvo Univerze v Ljubljani.

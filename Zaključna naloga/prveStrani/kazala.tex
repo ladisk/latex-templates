@@ -1,0 +1,58 @@
+\vspace*{0mm}
+\Large\textbf{Kazalo}\normalsize
+\vskip\medskipamount
+\leaders\vrule width \textwidth\vskip0.4pt
+\vskip\bigskipamount
+
+% Vsebinsko kazalo
+\makeatletter
+\renewcommand{\tableofcontents}{\@starttoc{toc}}
+\makeatother
+\tableofcontents
+
+\newpage
+
+\vspace*{0mm}
+\Large\textbf{Kazalo slik}\normalsize
+\vskip\medskipamount
+\leaders\vrule width \textwidth\vskip0.4pt
+\vskip\bigskipamount
+
+% Seznam slik
+\makeatletter
+\renewcommand{\listoffigures}{\@starttoc{lof}}
+\makeatother
+\renewcommand\cftfigpresnum{Slika~}
+\renewcommand\cftfigaftersnum{:}
+
+\newlength{\mylen} % a "scratch" length
+\settowidth{\mylen}{\bfseries\cftfigpresnum\cftfigaftersnum} % extra space
+\addtolength{\cftfignumwidth}{\mylen} % add the extra space
+\setlength{\cftfigindent}{0pt}
+
+\listoffigures
+
+\addcontentsline{toc}{section}{Kazalo slik}
+
+\newpage
+
+\vspace*{0mm}
+\Large\textbf{Kazalo preglednic}\normalsize
+\vskip\medskipamount
+\leaders\vrule width \textwidth\vskip0.4pt
+\vskip\bigskipamount
+
+% Seznam tabel
+\makeatletter
+\renewcommand{\listoftables}{\@starttoc{lot}}
+\makeatother
+
+\renewcommand\cfttabpresnum{Preglednica~}
+\renewcommand\cfttabaftersnum{:}
+\settowidth{\mylen}{\bfseries\cfttabpresnum\cfttabaftersnum} % extra space
+\addtolength{\cfttabnumwidth}{\mylen} % add the extra space
+\setlength{\cfttabindent}{0pt}
+
+\listoftables
+\addcontentsline{toc}{section}{Kazalo preglednic}
+\newpage 
