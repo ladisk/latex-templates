@@ -15,8 +15,10 @@
 \usepackage{ifthen}
 \usepackage{notoccite}
 \usepackage{fancyhdr}
+\usepackage{epstopdf}
 \usepackage{enumitem}
 \usepackage{longtable}
+\usepackage{epstopdf}
 \usepackage{hyperref}
 \usepackage{ifoddpage}
 \usepackage{tocloft}
@@ -68,7 +70,7 @@
 
 % set fancy_nohead fancy header
 \fancypagestyle{fancy_nohead}{
-\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[RO]{\thepage}
 \fancyhead{}
 \renewcommand{\headrulewidth}{0pt}
 \chead{}
@@ -103,12 +105,12 @@
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 \fancyhf{}
 \fancyhead[RO]{\leftmark}
-\fancyhead[RE]{\leftmark}
-\fancyfoot[LE,RO]{\thepage}
+
+\fancyfoot[RO]{\thepage}
 \renewcommand{\headrulewidth}{0.1mm}
 \renewcommand{\footrulewidth}{0mm}
 \cfoot{}
-\setlength{\headheight}{13.73pt}
+\setlength{\headheight}{14.5pt}
 
 
 \pagenumbering{arabic}
