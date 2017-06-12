@@ -36,6 +36,17 @@
             top=30mm,
             bottom=25mm]{geometry}
 
+% vrne argument z bold prvo besedo
+\def\opt#1{{[#1]}}
+\def\marg#1{{\char`\{#1\char`\}}}
+
+\newcommand*\firstbold[1]{{\setcmd#1 }}
+
+\def\setcmd#1 {%
+	\textbf{#1} 
+}
+
+
 %paragraph settings
 \setlength\parindent{0pt}
 \setlength{\parskip}{1.5ex plus 0.5ex minus 0.5ex}
@@ -101,7 +112,7 @@
 
 
 %change header and foot for non-chapter pages
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\chaptermark}[1]{\firstbold{\markboth{#1}}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 \fancyhf{}
 \fancyhead[RO]{\leftmark}
