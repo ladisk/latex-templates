@@ -32,9 +32,9 @@
 \usepackage{url}
 \usepackage{cite}
 \usepackage[left=30mm,
-            right=25mm,
-            top=30mm,
-            bottom=25mm]{geometry}
+right=25mm,
+top=30mm,
+bottom=25mm]{geometry}
 
 % vrne argument z bold prvo besedo
 \def\opt#1{{[#1]}}
@@ -63,7 +63,7 @@
 
 % set tablename to Preglednica
 \AtBeginDocument{%
-  \renewcommand\tablename{Preglednica}
+	\renewcommand\tablename{Preglednica}
 }
 
 % command for multiline cell in table
@@ -77,15 +77,15 @@
 
 %  accordingly format a chapter definition
 \titleformat{\chapter}[display]
-  {\bfseries}{}{0pt}{\Huge\thechapter\quad}
+{\bfseries}{}{0pt}{\Huge\thechapter\quad}
 
 % set fancy_nohead fancy header
 \fancypagestyle{fancy_nohead}{
-\fancyfoot[RO]{\thepage}
-\fancyhead{}
-\renewcommand{\headrulewidth}{0pt}
-\chead{}
-\cfoot{}
+	\fancyfoot[RO]{\thepage}
+	\fancyhead{}
+	\renewcommand{\headrulewidth}{0pt}
+	\chead{}
+	\cfoot{}
 }
 
 % assign no_header
@@ -103,57 +103,57 @@
 \renewcommand\cftchapdotsep{\cftdotsep}  % adds leader dots from chapter titles to page numbers
 
 \begin{document}
+	
+	
+	\pagenumbering{roman}
+	\input{prveStrani/prveStrani}
+	\newpage
+	\input{oznake/oznake}
+	
+	
+	%change header and foot for non-chapter pages
+	\renewcommand{\chaptermark}[1]{\markboth{\firstbold{#1}}{}}
 
-
-\pagenumbering{roman}
-\input{prveStrani/prveStrani}
-\newpage
-\input{oznake/oznake}
-
-
-%change header and foot for non-chapter pages
-\renewcommand{\chaptermark}[1]{\firstbold{\markboth{#1}}{}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
-\fancyhf{}
-\fancyhead[RO]{\leftmark}
-
-\fancyfoot[RO]{\thepage}
-\renewcommand{\headrulewidth}{0.1mm}
-\renewcommand{\footrulewidth}{0mm}
-\cfoot{}
-\setlength{\headheight}{14.5pt}
-
-
-\pagenumbering{arabic}
-\input{uvod/uvod}
-\newpage
-
-
-\input{teorija/teoreticneOsnove}
-\newpage
-
-
-\input{metodologija/metodologija}
-\newpage
-
-
-\input{rezultati/rezultati}
-\newpage
-
-
-\input{diskusija/diskusija}
-\newpage
-
-\input{zakljucki/zakljucki}
-\newpage
-
-\bibliographystyle{fs_zakljucne_naloge}
-\bibliography{References}
-\addcontentsline{}{chapter}{Literatura}
-\newpage
-
-\input{dodatki/dodatek}
-\newpage
-\thispagestyle{empty}
-\mbox{}
+	\fancyhf{}
+	\fancyhead[RO]{\leftmark}
+	
+	\fancyfoot[RO]{\thepage}
+	\renewcommand{\headrulewidth}{0.1mm}
+	\renewcommand{\footrulewidth}{0mm}
+	\cfoot{}
+	\setlength{\headheight}{14.5pt}
+	
+	
+	\pagenumbering{arabic}
+	\input{uvod/uvod}
+	\newpage
+	
+	
+	\input{teorija/teoreticneOsnove}
+	\newpage
+	
+	
+	\input{metodologija/metodologija}
+	\newpage
+	
+	
+	\input{rezultati/rezultati}
+	\newpage
+	
+	
+	\input{diskusija/diskusija}
+	\newpage
+	
+	\input{zakljucki/zakljucki}
+	\newpage
+	
+	\bibliographystyle{fs_zakljucne_naloge}
+	\bibliography{References}
+	\addcontentsline{}{chapter}{Literatura}
+	\newpage
+	
+	\input{dodatki/dodatek}
+	\newpage
+	\thispagestyle{empty}
+	\mbox{}
 \end{document} 

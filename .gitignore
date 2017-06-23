@@ -27,3 +27,6 @@ pdfa.xmpi
 *.bbl
 *.blg
 
+# PDF/A
+*.xmpi
+
