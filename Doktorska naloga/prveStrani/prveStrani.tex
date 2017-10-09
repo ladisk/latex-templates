@@ -6,12 +6,14 @@
 \newpage
 
 % TRI PRAZNE STRANI
+\hypersetup{pageanchor=false} % no page anchors for the empty-pagestyle pages
 \mbox{}\thispagestyle{empty}
 \newpage
 \mbox{}\thispagestyle{empty}
 \newpage
 \mbox{}\thispagestyle{empty}
 \newpage
+
 
 % NOTRANJA NASLOVNICA
 \input{prveStrani/naslovnica}
@@ -25,6 +27,7 @@
 \newpage
 \mbox{}\thispagestyle{empty}
 \newpage
+\hypersetup{pageanchor=true} % no page anchors for the empty-pagestyle pages
 
 % PROSTOR ZA ZAHVALO
 \pagestyle{fancy_nohead}
