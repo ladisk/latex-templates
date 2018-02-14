@@ -13,7 +13,7 @@
 \usepackage{graphicx}
 \usepackage[a-3u]{pdfx}
 \usepackage{ifthen}
-\usepackage{notoccite}
+
 \usepackage{fancyhdr}
 \usepackage{epstopdf}
 \usepackage{enumitem}
@@ -28,23 +28,15 @@
 \usepackage{multirow}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage[numbib]{tocbibind}
 \usepackage{url}
+\usepackage{icomma}
 \usepackage{cite}
+\usepackage[numbib]{tocbibind}
 \usepackage[left=30mm,
 right=25mm,
 top=30mm,
 bottom=25mm]{geometry}
 
-% vrne argument z bold prvo besedo
-\def\opt#1{{[#1]}}
-\def\marg#1{{\char`\{#1\char`\}}}
-
-\newcommand*\firstbold[1]{{\setcmd#1 }}
-
-\def\setcmd#1 {%
-	\textbf{#1} 
-}
 
 
 %paragraph settings
@@ -91,16 +83,13 @@ bottom=25mm]{geometry}
 % assign no_header
 \assignpagestyle{\chapter}{fancy_nohead}
 
-% section and chapter formatting
-\renewcommand{\thechapter}{\arabic{chapter}.}
-\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}.}
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
-\renewcommand{\thesubsubsection}{\thesubsection\arabic{subsubsection}.}
+% table, fig and eq formatting
 \renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
 \renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
 \renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
 
 \renewcommand\cftchapdotsep{\cftdotsep}  % adds leader dots from chapter titles to page numbers
+
 
 \begin{document}
 	
@@ -111,11 +100,9 @@ bottom=25mm]{geometry}
 	\input{oznake/oznake}
 	
 	
-	%change header and foot for non-chapter pages
-	\renewcommand{\chaptermark}[1]{\markboth{\firstbold{#1}}{}}
-
+	\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 	\fancyhf{}
-	\fancyhead[RO]{\leftmark}
+	\fancyhead[RO]{\nouppercase{\leftmark}}
 	
 	\fancyfoot[RO]{\thepage}
 	\renewcommand{\headrulewidth}{0.1mm}
@@ -147,9 +134,12 @@ bottom=25mm]{geometry}
 	\input{zakljucki/zakljucki}
 	\newpage
 	
+
 	\bibliographystyle{fs_zakljucne_naloge}
+	
+	\renewcommand{\thechapter}{}
 	\bibliography{References}
-	\addcontentsline{}{chapter}{Literatura}
+
 	\newpage
 	
 	\input{dodatki/dodatek}

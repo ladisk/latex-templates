@@ -27,9 +27,10 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{enumitem}
-\usepackage[numbib]{tocbibind}
 \usepackage{hyperref}
 \usepackage{cite}
+\usepackage[numbib]{tocbibind}
+\usepackage{icomma}
 \usepackage[inner=30mm,
             outer=25mm,
             top=30mm,
@@ -37,15 +38,6 @@
 
 
 
-% vrne argument z bold prvo besedo
-\def\opt#1{{[#1]}}
-\def\marg#1{{\char`\{#1\char`\}}}
-
-\newcommand*\firstbold[1]{{\setcmd#1 }}
-
-\def\setcmd#1 {%
-	\textbf{#1} 
-}
 
 
 % paragraph settings
@@ -101,11 +93,8 @@
 % assign no_header
 \assignpagestyle{\chapter}{fancy_nohead}
 
-% section and chapter formatting
-\renewcommand{\thechapter}{\arabic{chapter}.}
-\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}.}
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
-\renewcommand{\thesubsubsection}{\thesubsection\arabic{subsubsection}.}
+% table, fig and eq formatting
+
 \renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
 \renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
 \renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
@@ -126,12 +115,11 @@
 
 %change header and foot for non-chapter pages
 
-%bold prva beseda v headerju
-\renewcommand{\chaptermark}[1]{\markboth{\firstbold{#1}}{}}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 
 \fancyhf{}
-\fancyhead[RO]{\leftmark}
-\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\nouppercase{\leftmark}}
+\fancyhead[LE]{\nouppercase{\leftmark}}
 \fancyfoot[LE,RO]{\thepage}
 \renewcommand{\headrulewidth}{0.1mm}
 \renewcommand{\footrulewidth}{0mm}
@@ -163,10 +151,12 @@
 
 \input{zakljucki/zakljucki}
 \newpage
-
+	
+\renewcommand{\thechapter}{}
 \bibliographystyle{fs_zakljucne_naloge}
 \bibliography{References}
-\addcontentsline{}{chapter}{Literatura}
+
+
 \newpage
 
 \input{dodatki/dodatek}
