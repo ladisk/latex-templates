@@ -1,4 +1,4 @@
-% !TeX spellcheck = si_SI
+% !TeX spellcheck = sl_SI
 \chapter{Teoretične osnove in pregled literature}\label{cha:teoreticne_osnove}
 
 \section{Vsebina}\label{sec:vsebina}
@@ -59,7 +59,9 @@ Preglednice naj bodo zaporedno oštevilčene, za kar samodejno poskrbi \LaTeX. P
 Naslov preglednice z zaporedno številko preglednice in kratkim opisom naj bo nad preglednico. Kratek opis preglednice naj se začne z veliko začetnico in zaključi s končnim ločilom. Med besedilom in naslovom preglednice naj bo 1 (prazna) vrstica presledka, kot na primer pri preglednici \ref{tab:ucinkovitost_procesov}, razen če je naslov preglednice povsem na vrhu strani. Med preglednico in nadaljevanjem besedila naj bosta 2 prazni vrstici.
 
 \begin{table}[ht!]
-\caption{Učinkovitost procesov odstranjevanja različnih o\-nes\-na\-že\-val\-cev vode.} \label{tab:ucinkovitost_procesov}
+\caption{Učinkovitost procesov odstranjevanja različnih 
+o\-nes\-na\-že\-val\-cev vode \cite{bazant_1991}.} 
+\label{tab:ucinkovitost_procesov}
 \centering
 \begin{tabular}{|l|@{}c|@{}c|@{}c|@{}c@{}|}
 \hline
@@ -153,14 +155,16 @@ Slike naj bodo zaporedno oštevilčene, za kar samodejno poskrbi \LaTeX. Slika n
 \begin{figure}[ht!]
 \begin{centering}
   \includegraphics[scale=1.0]{slike/slika_mikroskop}
-  \caption{Slika posneta z elektronskim mikroskopom \cite{bazant_1991}.} \label{fig:slika_mikroskop}
+  \caption{Slika posneta z elektronskim mikroskopom \cite{stropnik_1997}.} 
+  \label{fig:slika_mikroskop}
 \end{centering}
 \end{figure}
 
 \begin{figure}[ht!]
 \begin{centering}
   \includegraphics[scale=1.0]{slike/neke_molekule}
-  \caption{Shematski prikaz postopka polimerizacije  \cite{Doe_1991, Bazant_2008}.} \label{fig:neke_molekule}
+  \caption{Shematski prikaz postopka polimerizacije  
+  \cite{stropnik_1997,Doe_1991}.} \label{fig:neke_molekule}
 \end{centering}
 \end{figure}
 
@@ -187,7 +191,8 @@ Vsaka slika (npr. tudi sliki \ref{fig:neke_molekule} in \ref{fig:2_grafa}) naj b
 \begin{figure}[ht!]
 \begin{centering}
   \includegraphics[scale=1.0]{slike/voda_in_nekej}
-  \caption{Časovno sosledje padca projektila v vodo z višine (a) 2,1 m; in (b) 4,1 m \cite{Gonzalez_2014}.} \label{fig:voda_in_nekej}
+  \caption{Časovno sosledje padca projektila v vodo z višine (a) 2,1 m; in (b) 
+  4,1 m \cite{Loukides_2020}.} \label{fig:voda_in_nekej}
 \end{centering}
 \end{figure}
 
@@ -218,26 +223,54 @@ Za pravilno navajanje fizikalnih veličin, konstant, indeksov in ostalih element
 
 \section{Citiranje in navajanje virov}\label{sec:citiranje}
 
-Pri citiranju upoštevajte pravila citiranja, ki ne veljajo le za zaključna dela, temveč tudi v splošnem za vsako predstavitev, v kateri sta uporabljeni intelektualna ali materialna lastnina drugih avtorjev. Kot vire v čim večji meri uporabljajte \textbf{novejšo relevantno mednarodno strokovno} literaturo. Spletni viri lahko predstavljajo \textbf{največ 25 \%} vseh virov, uporabljenih v zaključnem delu.
+Pri navajanju virov uporabljajte slovensko inačico IEEE standarda. Citiranje 
+oz. navajanje virov ne veljajo le za zaključna dela, temveč tudi v splošnem za 
+vsako predstavitev, v kateri sta uporabljeni intelektualna ali materialna 
+lastnina drugih avtorjev. Kot vire v čim večji meri uporabljajte 
+\textbf{novejšo relevantno mednarodno strokovno} literaturo. Viri iz spletnih 
+strani/internetni lahko predstavljajo \textbf{največ 25\%} vseh virov, 
+uporabljenih v zaključnem delu (ne članki).
+
+IEEE standard se uporablja v glavnem računalniških, elektro, 
+telekomunikacijshih in inženirskih področjih. Tri osnovne podatke vsebuje vsak 
+vir:
+\begin{itemize}
+	\item Avtor, ki ga zapišemo kot prvo črko imena in celoten priimek, (J. 
+	Novak).
+	\item Naslov članka, patenta, prispevka na konferenci,...  v dvojnem 
+	narekovaju ("Modalna analiza").
+	\item Naslov revije ali knjige v ležeči pisavi (\emph{Stability of 
+	Structures: Elastic, Inelastic, Fracture, and Damage Theories})
+\end{itemize}
+Tako bralec hitro ugotovi izvor informacije. Vse podatke, strani, zbirke, 
+izdaje...  se razlikujejo med seboj glede na vrsto vira in jih je potrebno 
+večkrat dodatno ugotoviti. 
 
 Vsa uporabljena literatura se v besedilu naloge navaja sproti po zaporednih številkah v \textbf{oglatem oklepaju}, zato naj bo tudi popis bibliografije oštevilčen v skladu z zaporedjem pojavljanja citatov v dokumentu. Primeri so prikazani v naslednjih povedih:
 \begin{itemize}
-\item V delu Bažanta in sodelavcev \cite{bazant_1991} je podan pregled vplivov na stabilnost konstrukcij.
-\item V delu Bažanta et al. \cite{bazant_1991} je podan pregled vplivov na stabilnost konstrukcij.
-\item Leta 2005 sta Bažant in Cedolin \cite{bazant_1991} predstavila uporabo modalne analize pri pre\-ra\-ču\-nu stabilnosti konstrukcij.
+	\item V delu Bažanta in sodelavcev \cite{bazant_1991} je podan pregled 
+	vplivov na stabilnost konstrukcij. \emph{Lahko tudi:}
+	\item V delu Bažanta et al. \cite{bazant_1991} je podan pregled vplivov na 
+	stabilnost konstrukcij.
+	\item Leta 2008 sta Bažant in Cedolin \cite{Bazant_2008} predstavila 
+	uporabo modalne analize pri pre\-ra\-ču\-nu stabilnosti konstrukcij.
+	\item Model je popisan v \cite{Doe_1991}. (\emph{ni potrebno pisati: »v 
+	literaturi \cite{Doe_1991}«}.)
+	\item Ko se citira več del je zaželjeno, da so ti ločeni z oglatimi 
+	oklepaji npr.:  ...preračunavanje modela so uporabili \cite{bazant_1991}, 
+	\cite{Doe_1991}, \cite{Bazant_2008}; (sprejemljivo tudi 
+	\cite{bazant_1991,Doe_1991,Bazant_2008}) 
+	\item Ko citirate več del in si sledijo eden za drugim npr. ...ekonomski 
+	vpliv na delovanje zasledujejo \cite{bazant_1991}-\cite{Bazant_2008}; 
+	(sprejemljivo tudi \cite{bazant_1991, stropnik_1997, 
+	Doe_1991,Loukides_2020, Bazant_2008})
 \end{itemize}
 
 Zaporedna številka vira, na katerega se sklicujemo v oglatem oklepaju, se ponovi v popisu literature (glej \ref{sec:vzorci_lit} \nameref{sec:vzorci_lit}), pri kasnejšem ponovnem sklicevanju na isto referenco pa uporabimo enako številko kot pri prvem sklicu. Vse to je v \LaTeX u avtomatsko izvedeno, vendar končna kontrola vsekakor ni odveč.
 
-Popis uporabljene literature naj bo levo poravnan (ang. align left) ter oblikovan v skladu s primeri v tej predlogi (glej poglavji \ref{sec:vzorci_lit} \nameref{sec:vzorci_lit} ter 7 Literatura) ter naj v splošnem obsega naslednje podatke:
-\begin{itemize}
-\item avtor, naslov dela, založba in kraj ter letnica izdaje, če gre za monografijo oz. \textbf{knjigo},
-\item avtor, naslov poglavja, urednik, naslov knjige, založba, kraj in letnica izdaje ter številka začetne in zadnje strani poglavja, če gre za \textbf{poglavje v knjigi} oz. monografiji,
-\item avtor, naslov članka, ime revije, številka revije, letnica izdaje ter številka začetne in zadnje strani članka, če gre za \textbf{članek} iz revije,
-\item avtor, naslov prispevka, urednik ter naslov zbornika, kraj in datum konference (oz. objave zbornika) ter številka začetne in zadnje strani prispevka, če gre za \textbf{prispevek na konferenci},
-\item avtor (če je naveden), naslov dela, spletni naslov, čas dostopa, če gre za vir iz \textbf{spletne strani},
-\item avtor, naslov dela, tip dela, kraj in leto objave, če gre za \textbf{doktorsko disertacijo} ali drugo \textbf{zaključno delo}.
-\end{itemize}
+Popis uporabljene literature naj bo levo poravnan (ang. align left) ter 
+oblikovan v skladu s primeri v tej predlogi (glej poglavji \ref{sec:vzorci_lit} 
+\nameref{sec:vzorci_lit} ter 7 Literatura).
 
 Ob sklicu na vir lahko pri več avtorjih namesto »in sodelavci« uporabimo »et al.«, na primer: V delu Bažanta et al. \cite{bazant_1991} je podan pregled vplivov\ldots
 
@@ -250,98 +283,130 @@ Vzorci popisa literature so podani v nadaljevanju. Z navedbo naštetih in (ali) 
 
 \subsection{Vzorci popisa literature}\label{sec:vzorci_lit}
 
-Za knjige:
+\textbf{Za knjige:}
 \begin{itemize}
-\item[{[1]}] Z.~P. Ba\v{z}ant, L.~Cedolin: \emph{Stability of Structures: Elastic,
-  Inelastic, Fracture, and Damage Theories}. Oxford University Press, New York,
-  1991.
-\item[{[5]}] J.~Stropnik: \emph{Priporočila avtorjem študijskih in strokovnih publikacij
-  na Fakulteti za strojništvo v Ljubljani}. Fakulteta za strojništvo,
-  Ljubljana, 1997.
+\item[{[1]}] Z.~P. Ba\v{z}ant in L.~Cedolin, \emph{Stability of Structures: 
+Elastic, Inelastic, Fracture, and Damage Theories}.\hskip 1em plus 0.5em minus
+0.4em\relax New York: Oxford University Press, 1991.\\
+
+\item[{[2]}]J.~Stropnik, \emph{Priporočila avtorjem študijskih in strokovnih 
+publikacij na Fakulteti za strojništvo v Ljubljani}.\hskip 1em plus 0.5em minus
+0.4em\relax Ljubljana: Fakulteta za strojništvo, 1997.
 \end{itemize}
 
-Za poglavja v knjigi:
+\textbf{Za poglavja v knjigi:}
 \begin{itemize}
-\item[{[2]}] J.~Doe: \emph{Earthquake stability}. V: Z.~P. Ba\v{z}ant, L.~Cedolin (ur.):
-  \emph{Stability of Structures: Elastic, Inelastic, Fracture, and Damage
-  Theories}. Oxford University Press, New York, 1991, str. 124--157.
+\item[{[3]}] J.~Doe, ``Earthquake stability,'' v \emph{Stability of Structures: 
+Elastic, Inelastic, Fracture, and Damage Theories}, Z.~P. Bažant in L.~Cedolin,
+ur.\hskip 1em plus 0.5em minus 0.4em\relax New York: Oxford University Press,
+1991, str. 124--157.
 \end{itemize}
 
-Za revije:
+\textbf{Za e-knjige:}
 \begin{itemize}
-\item[{[3]}] Z.~P. Ba\v{z}ant, L.~Cedolin: \emph{Noise control}. Journal of Sound and
-  Vibration \textbf{111}(2008) str. 42--50.
-\item[{[4]}] J.~Gonzalez-Gutierrez, J.~L. Carillo-Estrada, J.~C. Ruiz-Suarez:
-  \emph{Penetration of granular projectiles into a water target}. Scientific
-  reports \textbf{4}:6762 (2014) str. 1--5.
+\item[{[4]}] M.~Loukides in J.~Bruner, \emph{Building a Solid World}, 1.~izd., 
+Bejing, O'Reilly, [e-knjiga], 2014. dostopno na:
+\url{https://doi.org/10.1093/acprof:oso/9780199343638.003.0004} [ogled 10.
+junij 2020].
 \end{itemize}
 
-Za konferenčne prispevke:
+\textbf{Za revije:}
 \begin{itemize}
-\item[{[6]}] Z.~P. Ba\v{z}ant, L.~Cedolin: \emph{Modalna analiza}. V: B.~Podskrajnik (ur.):
-  \emph{Kuhljevi dnevi: Zbornik referatov}. Ljubljana, Slovenija, 2005, str.
-  2--5.
-\item[{[7]}] Z.~P. Ba\v{z}ant, L.~Cedolin: \emph{Modal analysis}. V: S.~Smith (ur.):
-  \emph{Proceedings of the 22. Congress of Polymers}. London, UK, 2007, str.
-  3--8.
+\item[{[5]}] Z.~P. Ba\v{z}ant in L.~Cedolin, ``Noise control,'' \emph{J. Sound 
+Vib.}, št.111, str. 42--50, 2008.\\
+\item[{[6]}] J.~Gonzalez-Gutierrez, J.~L. Carillo-Estrada in J.~C. Ruiz-Suarez,
+``Penetration of granular projectiles into a water target,'' \emph{Scientific
+reports}, let.~4, št. 6762, str. 1--5, 2014.
 \end{itemize}
 
-Za spletne vire z znanim avtorjem:
+\textbf{Za konferenčne prispevke:}
 \begin{itemize}
-\item[{[8]}] C.~Kogoj: \emph{Modalna analiza: izbrana poglavja iz {DTD}}. Dostopno na:
-  \url{http://lab.fs.uni-lj.si/ldtd/Gradivo_za_studente/DTD/Pregled\%20teorije.pdf},\\
-  Ogled: 11. 1. 2012.
+\item[{[7]}] Z.~P. Ba\v{z}ant in L.~Cedolin, ``Modalna analiza,'' v 
+\emph{Kuhljevi dnevi: Zbornik referatov}, B.~Podskrajnik (ur.), Ljubljana, 
+2005, str. 2--5.\\
+
+\item[{[8]}] Z.~P. Ba\v{z}ant in L.~Cedolin, ``Modal analysis,'' v 
+\emph{Proceedings of the 22. Congress of Polymers}, S.~Smith (ur.), London, 
+2007, str. 3--8.\\
 \end{itemize}
 
-Za publikacije organizacij (tiskane ali objavljene na spletnih straneh):
+\textbf{Za spletne vire z znanim avtorjem:}
 \begin{itemize}
-\item[{[9]}] {Merkur d.d.}: \emph{Letno poročilo podjetja Merkur d.d. Kranj}, 2005.
-\item[{[10]}] {Statistični urad republike Slovenije}: \emph{Statistični letopis Republike
-  Slovenije 2009}. Statistični urad republike Slovenije, Ljubljana, 2009.
-\item[{[11]}] {Statistični urad republike Slovenije}: \emph{Standardna klasifikacija
-  dejavnosti 2005}. Dostopno na:
-  \url{http://www.stat.si/klas/tabela.aspx?cvn=1895}, Ogled: 10. 1. 2012.
+\item[{[9]}]C.~Kogoj, \emph{Modalna analiza: izbrana poglavja iz {DTD}}. 
+dostopno na: 
+\url{http://lab.fs.uni-lj.si/ldtd/Gradivo_za_studente/DTD/Pregled\%20teorije.pdf}
+	[ogled: 11. 1. 2012].
 \end{itemize}
 
-Za spletne strani organizacij, društev, posameznikov:
+\textbf{Za publikacije organizacij (tiskane ali objavljene na spletnih 
+straneh):}
 \begin{itemize}
-\item[{[12]}] \emph{M Kariera – Zaposlitveni portal}. Dostopno na:
-  \url{http://www.mercator.si/kariera}, Ogled: 10. 1. 2012.
+\item[{[10]}] \emph{Letno poročilo podjetja {M}erkur d.d. {K}ranj}, {Merkur 
+d.d., Kranj}, 2005.\\
+
+\item[{[11]}] \emph{{Statistični letopis Republike Slovenije 2009}}, 
+Statistični urad republike Slovenije, Ljubljana, 2009.\\
+
+\item[{[12]}]\emph{Standardna klasifikacija dejavnosti 2005}, {Statistični urad 
+republike Slovenije}. dostopno na: 
+\url{http://www.stat.si/klas/tabela.aspx?cvn=1895}
+[ogled: 10. 1. 2012].
 \end{itemize}
 
-Za spletne baze, enciklopedije, slovarje ipd.:
+\textbf{Za spletne strani organizacij, društev, posameznikov:}
 \begin{itemize}
-\item[{[13]}] \emph{Engineering}. V Encyclopedia Britannica online. Dostopno na:
-  \url{http://student.britannica.com/comptons/article-9274119/engineering},
-  Ogled: 8. 1. 2012.
-\item[{[14]}] \emph{Poslovna aplikacija}. V eSlovarju. Dostopno na:
-
-  \url{http://www.eslovar.com/besedilo.asp?id=1563}, Ogled: 8. 1. 2012.
+\item[{[13]}] \emph{M Kariera – Zaposlitveni portal}. dostopno na:
+\url{http://www.mercator.si/kariera} [ogled: 10. 1. 2012].
 \end{itemize}
 
-Za zakonodajo (uradni listi, pravilniki, standardi):
+\textbf{Za spletne baze, enciklopedije, slovarje ipd.:}
 \begin{itemize}
-\item[{[15]}] \emph{Zakon o gospodarskih družbah}, {U}radni list RS št. 42/2006, 60/2006
-  popr., 26/2007-ZSDU-B, 33/2007-ZSReg-B, 67/2007-ZTFI (100/2007 popr.),
-  10/2008, 68/2008, 23/ 2009; Odl. US: U-I-268/06-35.
-\item[{[16]}] \emph{Zakon o okoljskih predpisih}, {U}radni list RS št. 72/2009-UPB2,
-  65/2010.
-\item[{[17]}] {ISO 2573:1977}: \emph{Tensile testing systems – Determination of K-value}.
-\item[{[18]}] {DIN 4768:1990}: \emph{Determination of surface roughness values R$_a$, R$_z$,
-  R$_{max}$}.
-\item[{[19]}] {JIS B 0601:2001}: \emph{Geometrical product specifications (GPS) profile
-  method – Terms, definitions and surface texture parameters}.
+\item[{[14]}] ``Engineering,'' v \emph{Encyclopedia Britannica online}. 
+dostopno na:
+\url{http://student.britannica.com/comptons/article-9274119/engineering}
+[ogled: 8. 1. 2012].\\
+
+\item[{[15]}] ``Poslovna aplikacija,'' v \emph{eSlovar}. dostopno na:
+\url{http://www.eslovar.com/besedilo.asp?id=1563} [ogled: 8. 1. 2012].
 \end{itemize}
 
-Za doktorske disertacije in druga zaključna dela:
+\textbf{Za zakonodajo (uradni listi, pravilniki, standardi):}
 \begin{itemize}
-\item[{[20]}] A.~Novak: \emph{Izdelava avtomatiziranega stroja za lupljenje krompirja}:
-  \emph{Doktorska disertacija}, Univerza v Ljubljani, 2015.
+\item[{[16]}] \emph{Zakon o gospodarskih družbah}, {U}radni list RS št. 
+42/2006, 60/2006 popr., 26/2007-ZSDU-B, 33/2007-ZSReg-B, 67/2007-ZTFI (100/2007 
+popr.), 10/2008, 68/2008, 23/2009; Odl. US: U-I-268/06-35.\\
+
+\item[{[17]}] \emph{Zakon o okoljskih predpisih}, {U}radni list RS št. 
+72/2009-UPB2, 65/2010.\\
+
+\item[{[18]}] {ISO 2573:1977}: \emph{Tensile testing systems – Determination of 
+K-value}, {ISO 2573:1977}.\\
+
+\item[{[19]}] \emph{Determination of surface roughness values R$_a$, R$_z$, 
+R$_{max}$}, {DIN 4768:1990}.\\
+
+\item[{[20]}] \emph{Geometrical product specifications (GPS) profile method – 
+Terms, definitions and surface texture parameters}, {JIS B 0601:2001}.
 \end{itemize}
 
-Popis literature je v \LaTeX u izveden avtomatsko, glede na vašo bazo bibliografij (ki se v primeru predloge nahaja na References.bib) ter izbrane makre, ki ustrezno generirajo \TeX~sintakso bibliografije. Za zaključna dela na Fakulteti za Strojništvo je izdelan ustrezen makro, ki se nahaja v fs\_zakljucne\_naloge.bst. Uporabo le-tega definirate z ukazom \verb|\bibliographystyle{fs_zakljucne_naloge}| v glavni datoteki.
+\textbf{Za doktorske disertacije in druga zaključna dela:}
+\begin{itemize}
+\item[{[21]}] A.~Novak, \emph{Izdelava avtomatiziranega stroja za lupljenje 
+krompirja}, doktorska disertacija, Ljubljana, 2015.
+\end{itemize}
 
-Sklici na popis literaturo so avtomatsko generirani, npr: \cite{bazant_1991}, \cite{Doe_1991},  \cite{Bazant_2008}, \cite{Gonzalez_2014, Bazant_2005} \cite{Bazant_2007, Kogoj_DTD, Merkur_2005, SURS_2009, SURS_2005, MKariera, Encyclopedia, Posl_app, ZGD, ZOP}, \cite{ISO_2573}, \cite{DIN_4768}, \cite{DIN_4768} in \cite{JISB0601, Novak_2015}.
+Popis literature je v \LaTeX u izveden avtomatsko, glede na vašo bazo 
+bibliografij (ki se v primeru predloge nahaja na References.bib) ter izbrane 
+makre, ki ustrezno generirajo \TeX~sintakso bibliografije. Za zaključna dela na 
+Fakulteti za Strojništvo je izdelan ustrezen makro, ki se nahaja v 
+fs\_zakljucne\_naloge.bst. Uporabo le-tega definirate z ukazom 
+\verb|\bibliographystyle{IEEEtran_slo}| v glavni datoteki.
+
+Sklici na popis literaturo so avtomatsko generirani, npr: \cite{bazant_1991}, 
+\cite{Doe_1991},  \cite{Bazant_2008}, \cite{Gonzalez_2014, Bazant_2005} 
+\cite{Bazant_2007, Kogoj_DTD, Merkur_2005, SURS_2009, SURS_2005, MKariera, 
+Encyclopedia, Posl_app, ZGD, ZOP}, \cite{ISO_2573}, \cite{DIN_4768} in 
+\cite{JISB0601, Novak_2015}.
 
 
 

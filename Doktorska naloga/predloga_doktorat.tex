@@ -30,6 +30,7 @@
 \usepackage{cite}
 \usepackage{icomma}
 \usepackage[numbib]{tocbibind}
+\usepackage[slovene]{datetime2}
 \usepackage[inner=30mm,
             outer=25mm,
             top=30mm,
@@ -95,6 +96,9 @@
 
 \renewcommand\cftchapdotsep{\cftdotsep}  % adds leader dots from chapter titles to page numbers
 
+% month year date format
+\DTMlangsetup{showdayofmonth=false}
+
 \begin{document}
 
 
@@ -143,7 +147,7 @@
 \input{zakljucki/zakljucki}
 \newpage
 
-\bibliographystyle{fs_zakljucne_naloge}
+\bibliographystyle{IEEEtran_slo}
 
 \renewcommand{\thechapter}{}
 \bibliography{References}

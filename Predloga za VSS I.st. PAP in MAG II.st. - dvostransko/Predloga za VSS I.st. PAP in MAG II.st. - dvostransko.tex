@@ -15,6 +15,7 @@
 \usepackage{ifthen}
 \usepackage{fancyhdr}
 \usepackage{epstopdf}
+\usepackage{enumitem}
 \usepackage{notoccite}
 \usepackage{longtable}
 \usepackage{hyperref}
@@ -26,11 +27,12 @@
 \usepackage{multirow}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{enumitem}
+\usepackage{url}
+\usepackage{icomma}
 \usepackage{hyperref}
 \usepackage{cite}
 \usepackage[numbib]{tocbibind}
-\usepackage{icomma}
+\usepackage[slovene]{datetime2}
 \usepackage[inner=30mm,
             outer=25mm,
             top=30mm,
@@ -101,6 +103,8 @@
 
 \renewcommand\cftchapdotsep{\cftdotsep}  % adds leader dots from chapter titles to page numbers
 
+% month year date format
+\DTMlangsetup{showdayofmonth=false}
 
 \begin{document}
 
@@ -152,8 +156,9 @@
 \input{zakljucki/zakljucki}
 \newpage
 	
+\bibliographystyle{IEEEtran_slo}
 \renewcommand{\thechapter}{}
-\bibliographystyle{fs_zakljucne_naloge}
+
 \bibliography{References}
 
 

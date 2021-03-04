@@ -18,7 +18,6 @@
 \usepackage{epstopdf}
 \usepackage{enumitem}
 \usepackage{longtable}
-\usepackage{epstopdf}
 \usepackage{hyperref}
 \usepackage{ifoddpage}
 \usepackage{tocloft}
@@ -32,6 +31,7 @@
 \usepackage{icomma}
 \usepackage{cite}
 \usepackage[numbib]{tocbibind}
+\usepackage[slovene]{datetime2}
 \usepackage[left=30mm,
 right=25mm,
 top=30mm,
@@ -90,6 +90,8 @@ bottom=25mm]{geometry}
 
 \renewcommand\cftchapdotsep{\cftdotsep}  % adds leader dots from chapter titles to page numbers
 
+% month year date format
+\DTMlangsetup{showdayofmonth=false}
 
 \begin{document}
 	
@@ -135,9 +137,10 @@ bottom=25mm]{geometry}
 	\newpage
 	
 
-	\bibliographystyle{fs_zakljucne_naloge}
+	\bibliographystyle{IEEEtran_slo}
 	
 	\renewcommand{\thechapter}{}
+	
 	\bibliography{References}
 
 	\newpage
