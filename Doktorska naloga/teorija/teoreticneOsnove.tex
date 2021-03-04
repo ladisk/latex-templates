@@ -1,90 +1,99 @@
-% !TeX spellcheck = si_SI
-\chapter{Teoretične osnove}\label{cha:teoreticne_osnove}
+% !TeX spellcheck = sl_SI
+\chapter{Teoretične osnove in pregled literature}\label{cha:teoreticne_osnove}
 
-
-V primeru, da je obravnavana tematika tesno povezana s širšim znanstvenim področjem oz.\ poznavanjem določenih pojavov, procesov, postopkov, preračunov itn., ki jih doktorsko delo sicer ne obravnava neposredno, so pa pomembni za njegovo razumevanje, se lahko za poglavjem \ref{cha:uvod} \nameref{cha:uvod} umesti še poglavje \nameref{cha:teoreticne_osnove}. V tem poglavju predstavimo omenjeno širšo tematiko, predpostavke, razpon obstoječih metod, modelov, postopkov, njihove omejitve in relevantnost za doktorsko delo. Takega poglavja se poslužujemo tudi npr., če je obseg poglavij \ref{sec:teza} \nameref{sec:teza} in \ref{sec:potek} \nameref{sec:potek}, na katerem temelji doktorsko delo, še relativno majhen in je potrebna nekoliko širša razlaga za lažje razumevanje obravnavane tematike. Naslov poglavja lahko prilagodimo obravnavani tematiki.
-\section{Navodilo za uporabo predloge za doktorsko delo}\label{sec:uporaba_predloge}
-V tej predlogi je \textbf{v nevsebinskem delu} doktorskega dela (do strani xxii) z [oglatimi oklepaji] označen tisti del besedila, ki ga mora študent oz.\ študentka spremeniti, da bo ustrezal njegovim oz.\ njenim podatkom ter podatkom o njegovem oz.\ njenem doktorskem delu. Ker uporabljate \LaTeX~se Kazalo vsebine, Kazalo slik ter Kazalo preglednic obnovijo ob vsakem prevajanju.
-
-V tej predlogi so \textbf{v vsebinskem delu} doktorskega dela navodila in primeri za oblikovanje doktorskega dela. Celotno besedilo (ostanejo glavni naslovi: \nameref{cha:uvod}, \nameref{cha:teoreticne_osnove} itn.) mora študent oz. študenta nadomestiti z besedilom, ki vsebinsko ustreza njegovemu oz. njenemu doktorskemu delu.
-
-\subsection{Uporaba prednastavljenih slogov v predlogi}\label{sec:prednastavitve}
-Za pisanje doktorskega dela uporabljajte to predlogo, v kateri so že \textbf{prednastavljeni slogi} za poenotenje končne oblike doktorskih del na FS.
-
-Kot je razvidno iz predloge, za naslove uporabljate naslednje ukaze:
-\begin{itemize}
-	\item \verb|\chapter| za glavne naslove (npr. \ref{cha:uvod} \nameref{cha:uvod}),
-	\item \verb|\section| za naslov 2.\ ravni (npr. \ref{sec:enacbe} \nameref{sec:enacbe}),
-	\item \verb|\subsection| za naslov 3.\ ravni (npr. \ref{sec:vzorci_lit} \nameref{sec:vzorci_lit}),
-	\item \verb|\subsubsection| za naslov 4.\ ravni (npr. \ref{sec:poglavje_3} \nameref{sec:poglavje_3}),
-	\item \verb|\begin{itemize}\item\end{itemize}| za navajanje alinej.
-\end{itemize}
-
-Za \textbf{naslove slik in preglednic} (in tudi številčenje enačb) uporabljajte možnost samodejnega številčenja, in sicer pod sliko ali nad preglednico. Naslov slike ali preglednice definirate z ukazom \verb|\caption{<>}|, oznako slike, enačbe in preglednice definirate z \verb|\label{<>}|, na njih se pa sklicujete z \verb|\ref{<>}|. Tak način omogoča enostavno samodejno številčenje slik in preglednic (npr. da ni potrebno ročno popravljati številčenja, če v besedilu vrinete novo sliko oz. preglednico) ter tudi enostavno izdelavo seznama slik oz.\ seznama preglednic. \LaTeX ovi makri skrbijo, da se vsa številčena polja ob prevajanju samodejno posodobijo, vključno s seznami v nevsebinskem delu.
-
-Za vstavljanje enačbe, kot je npr. enačba (\ref{eqn:e}) v poglavju \ref{sec:enacbe} \nameref{sec:enacbe}, uporabite okolje \verb|\begin{equation}<>\end{equation}|.
-
-\subsection{Sklicevanje na dele besedila}\label{sec:sklici}
-
-Sklicevanje na sliko, preglednico, enačbo ali del besedila je v \LaTeX u precej enostavno in enoznačno. Bodite pozorni, da pri sklicu na sliko oz. preglednico uporabite malo začetnico npr.\ \verb|slika \ref{<>}|. Pri sklicu na enačbo prav tako uporabite malo začetnico in postavite številko enačbe v oklepaje npr.\ \verb|enačba (\ref{<>})|.
-
+\section{Vsebina}\label{sec:vsebina}
+Ne glede na to ali je naloga teoretično ali eksperimentalno usmerjena, je 
+potrebno najprej obdelati teoretične osnove obravnavane tematike.
 
 \subsection{Vir informacij}\label{sec:vir_informacij}
-Pri pregledu literature naj bodo knjige in predvsem strokovni ter znanstveni članki glavni vir informacij. Pri spletnem iskanju člankov in ostale literature priporočamo uporabo naslednjih iskalnikov: Dikul, Web of Science, ScienceDirect in Google Scholar.
+Pri pregledu literature naj bodo knjige in predvsem strokovni ter znanstveni 
+članki glavni vir informacij. Pri spletnem iskanju člankov in ostale literature 
+priporočamo uporabo naslednjih iskalnikov: Dikul, Web of Science, ScienceDirect 
+in Google Scholar.
 
 Več o citiranju virov si preberite v nadaljevanju te predloge.
 
 \section{Podpoglavja in slogi}\label{sec:podpoglavja}
-Posamezne dele smiselno razdelite v podpoglavja, ki naj bodo zaporedno oštevilčena. Oblika in slog naslovov naj ustreza tem, ki so prikazani v tej predlogi. Številčenje naj bo samodejno, tako kot je prikazano v tej predlogi. To predlogo neposredno uporabite za pisanje zaključnega dela, saj so vsi slogi že prednastavljeni (navaden slog, slog za poglavja in podpoglavja, slog za naslove preglednic in slik itn.).
+Posamezne dele smiselno razdelite v podpoglavja, ki naj bodo zaporedno 
+oštevilčena. Oblika in slog naslovov naj ustreza tem, ki so prikazani v tej 
+predlogi. Številčenje naj bo samodejno, tako kot je prikazano v tej predlogi. 
+To predlogo neposredno uporabite za pisanje zaključnega dela, saj so vsi slogi 
+že prednastavljeni (navaden slog, slog za poglavja in podpoglavja, slog za 
+naslove preglednic in slik itn.).
 
 \subsection{Podpoglavje 2. ravni}\label{sec:poglavje_2}
 \subsubsection{Podpoglavje 3. ravni}\label{sec:poglavje_3}
 
-Prve vrstice odstavkov naj ne bodo zamaknjene, naj pa bo med posameznimi odstavki po ena prazna vrstica. Med naslovom podpoglavja in koncem predhodnega besedila naj bosta 2 prazni vrstici razmika. Če se naslov podpoglavja začne takoj za naslovom podpoglavja višje ravni, naj med naslovoma ne bo praznih vrstic. Uporabite lahko največ 4 ravni naslovov, torej glavni naslov ter 3 ravni podnaslovov.
+Prve vrstice odstavkov naj ne bodo zamaknjene, naj pa bo med posameznimi 
+odstavki po ena prazna vrstica. Med naslovom podpoglavja in koncem predhodnega 
+besedila naj bosta 2 prazni vrstici razmika. Če se naslov podpoglavja začne 
+takoj za naslovom podpoglavja višje ravni, naj med naslovoma ne bo praznih 
+vrstic. Uporabite lahko največ 4 ravni naslovov, torej glavni naslov ter 3 
+ravni podnaslovov.
 
-\textbf{Dodatna razmejitev besedila}\\[\baselineskip]
-Če želite v zadnji, 4.\ ravni podpoglavja še dodatno ločiti posamezne dele besedila, lahko uporabite eno vrstico krepkega tiska \verb|\textbf{<>}|.
+\textbf{Dodatna razmejitev besedila}\\
+Če želite v zadnji, 4. ravni podpoglavja še dodatno ločiti posamezne dele 
+besedila, lahko uporabite eno vrstico krepkega tiska \verb|\textbf{<>}|.
 
-\subsubsection{Uporaba krepkega, poševnega in podčrtanega tiska}\label{sec:emphasis_types}
+\subsubsection{Uporaba krepkega, poševnega in podčrtanega 
+tiska}\label{sec:emphasis_types}
 
 Poleg predhodnega primera je uporaba \textbf{krepkega tiska} smiselna:
 \begin{itemize}
-	\item kadar v besedilu prvič omenimo in opredelimo zelo pomemben pojem za razumevanje naloge,
+	\item kadar v besedilu prvič omenimo in opredelimo zelo pomemben pojem za 
+	razumevanje naloge,
 	\item kadar želimo posebej poudariti kakšen del ali misel,
 	\item kadar želimo npr. pri naštevanju vidno ločiti posamezne dele besedila.
 \end{itemize}
 
-Kadar v besedilu uporabljamo besede iz tujih jezikov, uporabljamo poševni oz. kurzivni tisk (ang. \emph{italics}). \underline{Podčrtanega tiska} praviloma ne uporabljamo.
+Kadar v besedilu uporabljamo besede iz tujih jezikov, uporabljamo poševni oz. 
+kurzivni tisk (ang. \emph{italics}). \underline{Podčrtanega tiska} praviloma ne 
+uporabljamo.
 
 
 \subsubsection{Ravni naštevanja}\label{sec:itemizing}
 
-Ne glede na to, koliko hierarhičnih ravni alinej je v besedilu uporabljenih za naštevanje (običajno ne več kot 2), v celotnem besedilu vedno uporabljamo enako kombinacijo ter način označevanja posameznih ravni alinej. S tem dosežemo poenoten videz besedila.
+Ne glede na to, koliko hierarhičnih ravni alinej je v besedilu uporabljenih za 
+naštevanje (običajno ne več kot 2), v celotnem besedilu vedno uporabljamo enako 
+kombinacijo ter način označevanja posameznih ravni alinej. S tem dosežemo 
+poenoten videz besedila.
 
-Za označevanje vseh ravni alinej uporabimo znak »--«. Urejanje odmikov od roba strani za posamezen nivo prepustimo \LaTeX u. Primer je prikazan v nadaljevanju:
+Za označevanje vseh ravni alinej uporabimo znak »--«. Urejanje odmikov od roba 
+strani za posamezen nivo prepustimo \LaTeX u. Primer je prikazan v nadaljevanju:
 \begin{itemize}
-	\item primer 1.\ ravni:
+	\item primer 1. ravni:
 	\begin{itemize}
-		\item primer 2.\ ravni,
-		\item primer 2.\ ravni,
+		\item primer 2. ravni,
+		\item primer 2. ravni,
 	\end{itemize}
-	\item primer 1.\ ravni:
+	\item primer 1. ravni:
 	\begin{itemize}
-		\item primer 2.\ ravni,
-		\item primer 2.\ ravni.
+		\item primer 2. ravni,
+		\item primer 2. ravni.
 	\end{itemize}
 \end{itemize}
 
-Pred novim odstavkom besedila naj bo za zadnjo alinejo 1 prazna vrstica presledka, oz. 2 prazni vrstici presledka, če zadnji alineji sledi naslov novega poglavja.
+Pred novim odstavkom besedila naj bo za zadnjo alinejo 1 prazna vrstica 
+presledka, oz. 2 prazni vrstici presledka, če zadnji alineji sledi naslov 
+novega poglavja.
 
 \section{Preglednice}\label{sec:preglednice}
 
-Preglednice naj bodo zaporedno oštevilčene, za kar samodejno poskrbi \LaTeX. Preglednica naj bo sredinsko poravnana. Primer je prikazan v preglednici \ref{tab:ucinkovitost_procesov}.
+Preglednice naj bodo zaporedno oštevilčene, za kar samodejno poskrbi \LaTeX. 
+Preglednica naj bo sredinsko poravnana. Primer je prikazan v preglednici 
+\ref{tab:ucinkovitost_procesov}.
 
-Naslov preglednice z zaporedno številko preglednice in kratkim opisom naj bo nad preglednico, in sicer poravnan z levim robom besedila. Kratek opis preglednice naj se začne z veliko začetnico in zaključi s končnim ločilom. Med besedilom in naslovom preglednice naj bo 1 (prazna) vrstica presledka, kot na primer pri preglednici \ref{tab:ucinkovitost_procesov}, razen če je naslov preglednice povsem na vrhu strani. Med preglednico in nadaljevanjem besedila naj bosta 2 prazni vrstici.
+Naslov preglednice z zaporedno številko preglednice in kratkim opisom naj bo 
+nad preglednico. Kratek opis preglednice naj se začne z veliko začetnico in 
+zaključi s končnim ločilom. Med besedilom in naslovom preglednice naj bo 1 
+(prazna) vrstica presledka, kot na primer pri preglednici 
+\ref{tab:ucinkovitost_procesov}, razen če je naslov preglednice povsem na vrhu 
+strani. Med preglednico in nadaljevanjem besedila naj bosta 2 prazni vrstici.
 
 \begin{table}[ht!]
-	\caption{Učinkovitost procesov odstranjevanja različnih onesnaževalcev vode.} \label{tab:ucinkovitost_procesov}
+	\caption{Učinkovitost procesov odstranjevanja različnih 
+		o\-nes\-na\-že\-val\-cev vode \cite{bazant_1991}.} 
+	\label{tab:ucinkovitost_procesov}
 	\centering
 	\begin{tabular}{|l|@{}c|@{}c|@{}c|@{}c@{}|}
 		\hline
@@ -159,86 +168,83 @@ Naslov preglednice z zaporedno številko preglednice in kratkim opisom naj bo na
 		\hline
 		\quad \quad MF & + & + & - & -\\
 		\hline
-		\multicolumn{5}{l}{\scriptsize{Legenda: + odstranjevanje poteka učinkovito, $\circ$ odstranjevanje delno poteka, - odstranjevanje ne poteka}} \\
+		\multicolumn{5}{l}{\scriptsize{Legenda: + odstranjevanje poteka 
+		učinkovito, $\circ$ odstranjevanje delno poteka, - odstranjevanje ne 
+		poteka}} \\
 	\end{tabular}
 \end{table}
 
-Če je preglednica ali del preglednice povzet iz drugega vira, ga je potrebno citirati. Če je povzeta celotna preglednica, se številko reference napiše k opisu preglednice. Če so povzete le določene vrednosti ali besedilo znotraj celic, se to lahko citira v posameznih celicah ali na koncu posamezne vrstice.
+Če je preglednica ali del preglednice povzet iz drugega vira, ga je potrebno 
+citirati. Če je povzeta celotna preglednica, se številko reference napiše k 
+opisu preglednice. Če so povzete le določene vrednosti ali besedilo znotraj 
+celic, se to lahko citira v posameznih celicah ali na koncu posamezne vrstice.
 
-Preglednice morajo biti berljive, jasne in pregledne. Pod preglednico ali sliko se lahko z manjšo velikostjo pisave \verb|\footnotesize| ali \verb|\scriptsize| zapišejo morebitne opombe ali npr.\ legenda, kot je prikazano v preglednici \ref{tab:ucinkovitost_procesov}. Vse preglednice in slike morajo biti (predhodno) omenjene v besedilu in tudi širše pojasnjene.
+Preglednice morajo biti berljive, jasne in pregledne. Pod preglednico ali sliko 
+se lahko z manjšo velikostjo pisave \verb|\footnotesize| ali \verb|\scriptsize| 
+zapišejo morebitne opombe ali npr. legenda, kot je prikazano v preglednici 
+\ref{tab:ucinkovitost_procesov}. Vse preglednice in slike morajo biti 
+(predhodno) omenjene v besedilu in tudi širše pojasnjene.
 
-\begin{table}[H]
-	\caption{Kumulativne vrednosti porabe vode na vseh UF enotah za leto 2012 \cite{Doe_1991}.} \label{tab:kumulativa}
-	\centering
-	\small
-	\begin{tabular}{|l|c|@{}c|c|c|@{}c|c|c|}%
-		\hline
-		\multirow{2}*{\minitab[c]{Mesec\\~}} &
-		\multirow{2}*{\minitab[c]{$V_{\text{f}}$ \\{[}m$^3${]}}} &
-		\multirow{2}*{\minitab[c]{$V_{\text{sp}}+V_{\text{kč,sp}}$ \\ {[}m$^3${]}}} &
-		\multirow{2}*{\minitab[c]{$V_{\text{v}}$ \\ {[}m$^3${]}}} &
-		\multirow{2}*{\minitab[c]{$V_{\text{p,cel}}$ \\ {[}m$^3${]}}} &
-		\multirow{2}*{\minitab[c]{$V_{\text{pov}} +  V_{\text{kč,pov}}$ \\ {[}m$^3${]}}} &
-		\multirow{2}*{\minitab[c]{$V_{\text{v}}$ \\ {[}m$^3${]}}} &
-		\multirow{2}*{\minitab[c]{$\varepsilon_{\text{UF}}$\\{[}\%{]}}}\\
-		&&&&&&&\\
-		\hline
-		Januar&34785&2315&37100&34785&9192&25593&69,0\\
-		\hline
-		Februar&28575&1574&30149&28575&8743&19832&65,8\\
-		\hline
-		Marec&34002&1517&35519&34002&8963&25039&70,5\\
-		\hline
-		April&32118&882&33081&32118&7516&24602&74,4\\
-		\hline
-		Maj&33949&548&34497&33949&7457&26492&76,8\\
-		\hline
-		Junij&37004&137&37141&37004&7175&29966&80,7\\
-		\hline
-		Julij&34276&455&34731&34276&7145&27131&78,1\\
-		\hline
-		Avgust&15621&834&16455&15621&3200&12421&75,5\\
-		\hline
-		September&29969&595&30564&29969&7937&22032&72,1\\
-		\hline
-		Oktober&31468&764&32232&31468&8242&23226&72,1\\
-		\hline
-		November&29033&1143&30176&29033&8065&20968&69,5\\
-		\hline
-		December&31874&1260&33134&31874&7463&24411&73,7\\
-		\hline
-	\end{tabular}
-\end{table}
+Preglednica naj bo smiselno umeščena v besedilo. Običajno preglednico umestimo 
+pod odstavek, v katerem preglednico prvič omenimo. Če preglednico zaradi bolj 
+tekočega oblikovanja besedila umestimo drugače, naj bo vsekakor umeščena v 
+bližini prve omembe v besedilu.
 
-
-Preglednica naj bo smiselno umeščena v besedilo. Običajno preglednico umestimo pod odstavek, v katerem preglednico prvič omenimo. Če preglednico zaradi bolj tekočega oblikovanja besedila umestimo drugače, naj bo vsekakor umeščena v bližini prve omembe v besedilu.
-
-Posamezno preglednico (ali sliko), če je le mogoče, prikažemo na eni strani. Če se zaradi velikosti preglednice ni mogoče izogniti njeni delitvi na več strani, na koncu vsake strani (če se preglednica nadaljuje na naslednji strani) desno spodaj napišemo »se nadaljuje«, na naslednjo stran (kjer se preglednica nadaljuje) levo zgoraj pa »nadaljevanje«. Na vsaki strani obvezno ponovno natisnemo celotno glavo preglednice, stolpce pa po potrebi oštevilčimo. Za take primere je smiselno uporabiti paket \verb|longtable|, kot je že uporabljen v Seznamu uporabljenih simbolov.
+Posamezno preglednico (ali sliko), če je le mogoče, prikažemo na eni strani. Če 
+se zaradi velikosti preglednice ni mogoče izogniti njeni delitvi na več strani, 
+na koncu vsake strani (če se preglednica nadaljuje na naslednji strani) desno 
+spodaj napišemo »se nadaljuje«, na naslednjo stran (kjer se preglednica 
+nadaljuje) levo zgoraj pa »nadaljevanje«. Na vsaki strani obvezno ponovno 
+natisnemo celotno glavo preglednice, stolpce pa po potrebi oštevilčimo. Za take 
+primere je smiselno uporabiti paket \verb|longtable|, kot je že uporabljen v 
+Seznamu uporabljenih simbolov.
 
 \section{Slike}\label{sec:slike}
 
-Slike naj bodo zaporedno oštevilčene, za kar samodejno poskrbi \LaTeX. Slika naj bo sredinsko poravnana. Primer je prikazan na sliki \ref{fig:slika_mikroskop} \cite{Doe_1991, Bazant_2008} \cite{bazant_1991}\cite{Gonzalez_2014}.
+Slike naj bodo zaporedno oštevilčene, za kar samodejno poskrbi \LaTeX. Slika 
+naj bo sredinsko poravnana. Primer je prikazan na sliki 
+\ref{fig:slika_mikroskop}.
 
 \begin{figure}[ht!]
 	\begin{centering}
 		\includegraphics[scale=1.0]{slike/slika_mikroskop}
-		\caption{Slika posneta z elektronskim mikroskopom \cite{Doe_1991}.} \label{fig:slika_mikroskop}
+		\caption{Slika posneta z elektronskim mikroskopom 
+		\cite{stropnik_1997}.} 
+		\label{fig:slika_mikroskop}
 	\end{centering}
 \end{figure}
 
 \begin{figure}[ht!]
 	\begin{centering}
 		\includegraphics[scale=1.0]{slike/neke_molekule}
-		\caption{Shematski prikaz postopka polimerizacije \cite{Doe_1991,Bazant_2008}.} \label{fig:neke_molekule}
+		\caption{Shematski prikaz postopka polimerizacije  
+			\cite{stropnik_1997,Doe_1991}.} \label{fig:neke_molekule}
 	\end{centering}
 \end{figure}
 
-Naslov slike z zaporedno številko slike in kratkim opisom naj bo pod sliko, sredinsko poravnan glede na sliko in besedilo. Opis slike naj se začne z veliko začetnico in zaključi s končnim ločilom. Priporočljivo je, da so imena oz.\ opisi slik (kot tudi preglednic) kratki, saj je iz vidika kasnejše izdelave kazala slik (oz.\ preglednic) to bolj primerno.
+Naslov slike z zaporedno številko slike in kratkim opisom naj bo pod sliko, 
+sredinsko poravnan glede na sliko in besedilo. Opis slike naj se začne z veliko 
+začetnico in zaključi s končnim ločilom. Priporočljivo je, da so imena oz. 
+opisi slik (kot tudi preglednic) kratki, saj je iz vidika kasnejše izdelave 
+kazala slik (oz. preglednic) to bolj primerno.
 
-Slike morajo biti berljive, jasne in pregledne. Slike morajo biti dobre kvalitete in v slovenskem jeziku. Če je na sliki diagram, morajo biti veličine in enote vseh osi jasno in dosledno označene. Na mikroskopskih posnetkih mora biti ustrezno označena dolžinska skala. Slike, ki so preslikane z optičnimi bralniki, naj bodo v čim boljši ločljivosti. Slike, ki jih ustvarjate sami s programi kot so CorelDraw, Photoshop, PowerPoint idr., naj bodo shranjene v formatu *.emf (ang. Enhanced Metafile) ali *.eps (ang. Encapsulated PostScript). Na ta način bodo pri pretvarjanju dokumenta v *.pdf obliko ohranjene vse podrobnosti na sliki in tudi pri tiskanju bo zagotovljena najvišja možna kvaliteta.
+Slike morajo biti berljive, jasne in pregledne. Slike morajo biti dobre 
+kvalitete in v slovenskem jeziku. Če je na sliki diagram, morajo biti veličine 
+in enote vseh osi jasno in dosledno označene. Na mikroskopskih posnetkih mora 
+biti ustrezno označena dolžinska skala. Slike, ki so preslikane z optičnimi 
+bralniki, naj bodo v čim boljši ločljivosti. Slike, ki jih ustvarjate sami s 
+programi kot so CorelDraw, Photoshop, PowerPoint idr., naj bodo shranjene v 
+formatu *.emf (ang. Enhanced Metafile) ali *.eps (ang. Encapsulated 
+PostScript). Na ta način bodo pri pretvarjanju dokumenta v *.pdf obliko 
+ohranjene vse podrobnosti na sliki in tudi pri tiskanju bo zagotovljena 
+najvišja možna kvaliteta.
 
-
-Vsaka slika (npr. tudi sliki \ref{fig:neke_molekule} in \ref{fig:2_grafa}) naj bo smiselno umeščena v besedilo. Običajno sliko umestimo pod odstavek, v katerem jo prvič omenimo. Če sliko zaradi bolj tekočega oblikovanja besedila umestimo drugače, naj bo vsekakor umeščena v bližini prve omembe v besedilu. Če sta sliki umeščeni ena pod drugo, naj bosta med naslovom prve slike in drugo sliko 2 prazni vrstici.
+Vsaka slika (npr. tudi sliki \ref{fig:neke_molekule} in \ref{fig:2_grafa}) naj 
+bo smiselno umeščena v besedilo. Običajno sliko umestimo pod odstavek, v 
+katerem jo prvič omenimo. Če sliko zaradi bolj tekočega oblikovanja besedila 
+umestimo drugače, naj bo vsekakor umeščena v bližini prve omembe v besedilu. Če 
+sta sliki umeščeni ena pod drugo, naj bosta med naslovom prve slike in drugo 
+sliko 2 prazni vrstici.
 
 \begin{figure}
 	\begin{subfigure}[b]{.45\linewidth}
@@ -251,40 +257,66 @@ Vsaka slika (npr. tudi sliki \ref{fig:neke_molekule} in \ref{fig:2_grafa}) naj b
 		\caption{}\label{subfig:graf2}
 	\end{subfigure}
 	
-	\caption{(a) Odvisnost deleža zgrešenih strelov na tekmovanju v odvisnosti od časa treninga pred njim in (b) deformacija v odvisnosti od časa obremenjevanja za dva različna vzorca.}\label{fig:2_grafa}
+	\caption{(a) Odvisnost deleža zgrešenih strelov na tekmovanju v odvisnosti 
+	od časa treninga pred njim in (b) deformacija v odvisnosti od časa 
+	obremenjevanja za dva različna vzorca.}\label{fig:2_grafa}
 \end{figure}
 
 \begin{figure}[ht!]
 	\begin{centering}
 		\includegraphics[scale=1.0]{slike/voda_in_nekej}
-		\caption{Časovno sosledje padca projektila v vodo z višine (a) 2,1 m; in (b) 4,1 m \cite{bazant_1991}.} \label{fig:voda_in_nekej}
+		\caption{Časovno sosledje padca projektila v vodo z višine (a) 2,1 m; 
+		in (b) 
+			4,1 m \cite{Loukides_2020}.} \label{fig:voda_in_nekej}
 	\end{centering}
 \end{figure}
 
-Kot je prikazano na slikah \ref{fig:2_grafa} in \ref{fig:voda_in_nekej}, lahko več povezanih diagramov združite v eno sliko, pri čemer jih jasno ločite na podsklope, t.j.\ (a) in (b), pri tem pa pazite na preglednost.
+Kot je prikazano na slikah \ref{fig:2_grafa} in \ref{fig:voda_in_nekej}, lahko 
+več povezanih diagramov združite v eno sliko, pri čemer jih jasno ločite na 
+podsklope, t.j. (a) in (b), pri tem pa pazite na preglednost.
 
-Če je slika povzeta po določenem viru, je to potrebno citirati, kot je tudi prikazano na sliki \ref{fig:slika_mikroskop}. Tudi vse slike drugih avtorjev morajo biti citirane.
+Če je slika povzeta po določenem viru, je to potrebno citirati, kot je tudi 
+prikazano na sliki \ref{fig:slika_mikroskop}. Tudi vse slike drugih avtorjev 
+morajo biti citirane.
 
 \section{Enačbe}\label{sec:enacbe}
 
-Oblikovanje enačbe je v \LaTeX u avtomatsko. Pojasnilo enačbe mora biti v tekstu.
+Oblikovanje enačbe je v \LaTeX u avtomatsko. Pojasnilo enačbe mora biti v 
+tekstu.
 \begin{equation}\label{eqn:e}
-e = m\,c^2
+	e = m\,c^2
 \end{equation}
 \begin{equation}\label{eqn:e_cel}
-e_{\text{cel}}=\sum_{i=1}^{n}\,m_{i}c^2
+	e_{\text{cel}}=\sum_{i=1}^{n}\,m_{i}c^2
 \end{equation}
 \begin{equation}\label{eqn:Nu}
-N_{\text{u}} = \frac{0{,}34}{Pr_{\text{L},i}\cdot 2{,}3A}
+	N_{\text{u}} = \frac{0{,}34}{Pr_{\text{L},i}\cdot 2{,}3A}
 \end{equation}
 
-V nadaljevanju teksta, če je to potrebno, se sklicuje na ustrezno številko enačbe, npr. na enačbo (\ref{eqn:e}).
+V nadaljevanju teksta, če je to potrebno, se sklicuje na ustrezno številko 
+enačbe, npr. na enačbo \eqref{eqn:e}.
 
-Za oznake veličin in druge simbole običajno uporabljamo črke latinske in grške abecede, včasih z dodatki indeksov in drugih znakov. Kot je prikazano v enačbah (\ref{eqn:e_cel}) in (\ref{eqn:Nu}), morajo biti simboli, torej oznake veličin, npr.\ $e$ ali $Pr$, pisane v kurzivnem (poševnem) tisku. Za simbolom ne postavljamo pike, razen če se s simbolom konča poved.
+Za oznake veličin in druge simbole običajno uporabljamo črke latinske in grške 
+abecede, včasih z dodatki indeksov in drugih znakov. Kot je prikazano v enačbah 
+\eqref{eqn:e_cel} in \eqref{eqn:Nu}, morajo biti simboli, torej oznake veličin, 
+npr. $e$ ali $Pr$, pisane v kurzivnem (poševnem) tisku. Za simbolom ne 
+postavljamo pike, razen če se s simbolom konča poved.
 
-Indekse običajno uporabimo, kadar imata dve veličini enak simbol, ali pa če želimo veličino dodatno opredeliti (npr. $_{\text{max}}$ kot največji, $_{\text{cel}}$ kot celoten, $_{\text{z}}$ kot začetni ipd.). Indekse, ki označujejo fizikalne veličine, pišemo v kurzivnem (poševnem) tisku, opisni indeksi, ki služijo dodatnemu opredeljevanju veličin, npr.\ »cel« v $e_{\text{cel}}$ ali »L« v $Pr_{\text{L},i}$, pa morajo biti pisani v normalnem (pokončnem) tisku. Tudi indekse, ki so sestavljeni iz številk, pišemo v normalnem (pokončnem) tisku (npr. $A_1$), indekse iz črk, ki označujejo štetje oz. številke (npr.\ »i« v $m_i$ ali v $Pr_{\text{L},i}$) pa pišemo v kurzivnem (poševnem) tisku.
+Indekse običajno uporabimo, kadar imata dve veličini enak simbol, ali pa če 
+želimo veličino dodatno opredeliti (npr. $_{\text{max}}$ kot največji, 
+$_{\text{cel}}$ kot celoten, $_{\text{z}}$ kot začetni ipd.). Indekse, ki 
+označujejo fizikalne veličine, pišemo v kurzivnem (poševnem) tisku, opisni 
+indeksi, ki služijo dodatnemu opredeljevanju veličin, npr. »cel« v 
+$e_{\text{cel}}$ ali »L« v $Pr_{\text{L},i}$, pa morajo biti pisani v normalnem 
+(pokončnem) tisku. Tudi indekse, ki so sestavljeni iz številk, pišemo v 
+normalnem (pokončnem) tisku (npr. $A_1$), indekse iz črk, ki označujejo štetje 
+oz. številke (npr. »i« v $m_i$ ali v $Pr_{\text{L},i}$) pa pišemo v kurzivnem 
+(poševnem) tisku.
 
-Za pravilno navajanje fizikalnih veličin, konstant, indeksov in ostalih elementov v enačbah upoštevajte »Priporočila avtorjem študijskih in strokovnih publikacij na Fakulteti za strojništvo v Ljubljani« avtorja viš.\ pred.\ dr.\ Stropnika \cite{stropnik_1997}.
+Za pravilno navajanje fizikalnih veličin, konstant, indeksov in ostalih 
+elementov v enačbah upoštevajte »Priporočila avtorjem študijskih in strokovnih 
+publikacij na Fakulteti za strojništvo v Ljubljani« avtorja 
+viš.~pred.~dr.~Stropnika \cite{stropnik_1997}.
 
 \section{Citiranje in navajanje virov}\label{sec:citiranje}
 
@@ -499,3 +531,8 @@ Sklici na popis literaturo so avtomatsko generirani, npr: \cite{bazant_1991},
 \cite{Bazant_2007, Kogoj_DTD, Merkur_2005, SURS_2009, SURS_2005, MKariera, 
 	Encyclopedia, Posl_app, ZGD, ZOP}, \cite{ISO_2573}, \cite{DIN_4768} in 
 \cite{JISB0601, Novak_2015}.
+
+
+
+
+
