@@ -1,0 +1,61 @@
+\vspace*{0mm}
+\Large\textbf{Table of contents}\normalsize
+\vskip\medskipamount
+\leaders\vrule width \textwidth\vskip0.4pt
+\vskip\bigskipamount
+
+% Vsebinsko kazalo
+\makeatletter
+\renewcommand{\tableofcontents}{\@starttoc{toc}}
+\makeatother
+\tableofcontents
+
+\newpage
+\addifeven
+
+\vspace*{0mm}
+\Large\textbf{List of figures}\normalsize
+\vskip\medskipamount
+\leaders\vrule width \textwidth\vskip0.4pt
+\vskip\bigskipamount
+\addcontentsline{toc}{section}{List of figures}
+
+% Seznam slik
+\makeatletter
+\renewcommand{\listoffigures}{\@starttoc{lof}}
+\makeatother
+\renewcommand\cftfigpresnum{Figure~}
+\renewcommand\cftfigaftersnum{:}
+
+\newlength{\mylen} % a "scratch" length
+\settowidth{\mylen}{\bfseries\cftfigpresnum\cftfigaftersnum} % extra space
+\addtolength{\cftfignumwidth}{\mylen} % add the extra space
+\setlength{\cftfigindent}{0pt}
+
+\listoffigures
+
+
+
+\newpage
+\addifeven
+
+\vspace*{0mm}
+\Large\textbf{List of tables}\normalsize
+\vskip\medskipamount
+\leaders\vrule width \textwidth\vskip0.4pt
+\vskip\bigskipamount
+\addcontentsline{toc}{section}{List of tables}
+% Seznam tabel
+\makeatletter
+\renewcommand{\listoftables}{\@starttoc{lot}}
+\makeatother
+
+\renewcommand\cfttabpresnum{Table }
+\renewcommand\cfttabaftersnum{:}
+\settowidth{\mylen}{\bfseries\cfttabpresnum\cfttabaftersnum} % extra space
+\addtolength{\cfttabnumwidth}{\mylen} % add the extra space
+\setlength{\cfttabindent}{0pt}
+
+\listoftables
+
+\newpage 

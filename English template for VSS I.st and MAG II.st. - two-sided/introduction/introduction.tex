@@ -1,0 +1,39 @@
+% !TeX spellcheck = si_SI
+\chapter{Introduction}\label{cha:introduction}
+
+\section{Problem background}\label{sec:problem_background}
+The introductory chapter should contain two subsections: \ref{sec:background_of_the_problem} \nameref{sec:background_of_the_problem} and \ref{sec:goals_of_tasks} \nameref{sec:goals_of_tasks}. The chapter \ref{sec:background_of_the_problem} \nameref{sec:background_of_the_problem} should contain at least one introductory paragraph, where there should be a general description or explanation of the discussed topic. Present the starting points of the final work and its importance.
+
+
+\section{Task Objectives}\label{sec:Task_Objectives}
+Present the problems, goals and structure (description of content, division by chapters) of the final work in a special sub-chapter.
+
+Do not present results and conclusions in the introduction. In this section, focus on what will be presented in the work and how the work is structured. Write what you will do, what you expect from theoretical and what from practical research, and what are the risks and dangers of not achieving these goals. Write about hypotheses, not results.
+
+\section{Instructions for using the template for final assignments}\label{sec:using_the_template}
+In this proposal, in the non-content part of the final assignment (up to page xxii), the part of the text that the student or student to change it to suit his or her data and data about his or her final assignments. Since you are using \LaTeX~, the Table of Contents, Table of Figures and Table of Contents are updated every time you compile.
+
+In this proposal, in the substantive part of the final thesis, there are instructions and examples for creating the final thesis. The entire text (the main titles remain: \nameref{cha:introduction}, \nameref{cha:teoreticne_osnove}, etc.) must be read by the student or replace the student with a text that corresponds in content to his or her final assignments.
+
+\subsection{Using preset styles in a template}\label{sec:presets}
+To write the final paper, use this template, which already contains \textbf{preset styles} to unify the final form of final papers on FS.
+
+As you can see from the template, you use the following commands for addresses:
+\begin{itemize}
+\item \verb|\chapter| for main titles,
+\item \verb|\section| for a Level 2 title,
+\item \verb|\subsection| for a level 3 title,
+\item \verb|\subsubsection| for a level 4 title,
+\item \verb|\begin{itemize}\item\end{itemize}| to indent.
+\end{itemize}
+
+For \textbf{titles of figures and tables} (and also the numbering of equations) use the automatic numbering option, either below the figure or above the table. You define the title of the figure or table with the command \verb|\caption{<>}|, the label of the figure, equations and tables is defined with \verb|\label{<>}|, and you refer to them with \verb|\ref{< >}| or to equations with \verb|\eqref{<>}|. This method enables easy automatic numbering of images and tables (e.g. no need to manually correct the numbering if you insert a new image or table in the text) and also easy creation of a list of images or list of spreadsheets. \LaTeX these macros ensure that all numbered fields are automatically updated during compilation, including lists in the non-content section.
+
+To insert an equation such as equation \eqref{eqn:e} in chapter \ref{sec:enacbe} \nameref{sec:enacbe}, use environment \verb|\begin{equation}<>\end{equation}|.
+
+\subsection{References to parts of the text}\label{sec:references}
+
+Referring to a figure, table, equation or piece of text is quite easy and unambiguous in \LaTeX. Please note that when referring to the image or spreadsheet, use a lowercase initial, e.g. \verb|image \ref{<>}|. When referring to an equation, also use a lowercase letter and place the equation number in brackets, e.g. \verb|equation \eqref{<>}|.
+
+
+

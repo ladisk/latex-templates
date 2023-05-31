@@ -1,0 +1,45 @@
+% !TeX spellcheck = si_SI
+%Urejanje platnic, naslovnice, UDK, povzetka in kazal
+%
+% PLATNICA
+\hypersetup{pageanchor=false} % no page anchors for the empty-pagestyle pages
+\input{firstPages/cover}
+\newpage
+
+% TRI PRAZNE STRANI
+\mbox{}\thispagestyle{empty}
+\newpage
+\mbox{}\thispagestyle{empty}
+\newpage
+\mbox{}\thispagestyle{empty}
+\newpage
+
+% NOTRANJA NASLOVNICA
+\input{firstPages/title}
+\newpage
+\mbox{}\thispagestyle{empty}
+\newpage
+\hypersetup{pageanchor=true} % no page anchors for the empty-pagestyle pages
+
+% PROSTOR ZA ODLOČBO
+\thispagestyle{empty}
+[Space for a signed master's thesis topic]
+\newpage
+\mbox{}\thispagestyle{empty}
+\newpage
+
+% PROSTOR ZA ZAHVALO
+\pagestyle{fancy_nohead}
+\input{firstPages/acknowledgments}
+\newpage
+\mbox{}
+\newpage
+
+
+
+% IZVLEČKI IN UDK
+\input{firstPages/abstract}
+\newpage
+
+% KAZALA
+\input{firstPages/tocs}

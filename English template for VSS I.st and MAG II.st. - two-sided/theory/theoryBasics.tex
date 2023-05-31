@@ -1,0 +1,533 @@
+% !TeX spellcheck = sl_SI
+\chapter{Theoretical foundations and literature review}\label{cha:theoretic_foundations}
+
+\section{Content}\label{sec:content}
+Regardless of whether the task is theoretically or experimentally oriented, it is
+it is necessary to first process the theoretical foundations of the discussed topic.
+
+\subsection{Source of information}\label{sec:source_of_information}
+When reviewing the literature, the books should be primarily professional and scientific
+articles the main source of information. When searching for articles and other literature online
+we recommend using the following search engines: Dikul, Web of Science, ScienceDirect
+and Google Scholar.
+
+Read more about citing sources later in this template.
+
+\section{Subsections and styles}\label{sec:subsections}
+Divide the individual parts sensibly into sub-chapters, which should be consecutive
+numbered. The format and style of headings should correspond to those shown in this
+suggestions. The numbering should be automatic as shown in this template.
+Use this template directly to write your final paper, as all styles are
+already preset (regular style, style for chapters and sub-chapters, style for
+titles of tables and pictures, etc.).
+
+\subsection{Level 2 Subchapter}\label{sec:chapter_2}
+\subsubsection{Level 3 Subchapter}\label{sec:chapter_3}
+
+The first lines of paragraphs should not be indented, but should be indented
+paragraphs with one blank line each. Between the title of the subsection and the end of the previous one
+the text should be 2 blank lines apart. If the subsection title begins
+immediately after the heading of the higher-level subchapter, there should be no blanks between the headings
+lines. You can use a maximum of 4 levels of addresses, i.e. the main address and the 3rd
+subtitle level.
+
+\textbf{Additional text delimitation}\\
+If you want to further separate individual parts in the last, 4th level of the subsection
+text, you can use one line of bold \verb|\textbf{<>}|.
+
+\subsubsection{Using bold, italic and underline
+print}\label{sec:emphasis_types}
+
+In addition to the previous example, the use of \textbf{bold} makes sense:
+\begin{itemize}
+\item when we first mention and define the very important term for in the text
+understanding the task,
+\item when we want to emphasize a particular part or thought,
+\item when we want e.g. clearly separate individual parts of the text when enumerating.
+\end{itemize}
+
+When words from foreign languages are used in the text, we use italics or
+cursive print (eng. \emph{italics}). \underline{Underlined print} generally not
+we use
+
+
+\subsubsection{Enumeration Levels}\label{sec:itemizing}
+
+No matter how many hierarchical levels of indentation are used in the text for
+enumeration (usually no more than 2), we always use the same throughout the text
+the combination and the way of marking individual levels of indents. With this we achieve
+uniform appearance of the text.
+
+To indicate all levels of indents, we use the sign "--". Editing margins
+we leave the pages for each level to \LaTeX u. An example is shown below:
+\begin{itemize}
+\item level 1 example:
+\begin{itemize}
+\item level 2 example,
+\item level 2 example,
+\end{itemize}
+\item level 1 example:
+\begin{itemize}
+\item level 2 example,
+\item level 2 example.
+\end{itemize}
+\end{itemize}
+
+Before a new paragraph of text, there should be 1 blank line after the last indent
+space, or 2 blank lines of space if the last indent is followed by a title
+of a new chapter.
+
+\section{Spreadsheets}\label{sec:spreadsheets}
+
+Tables should be numbered consecutively, which is automatically taken care of by \LaTeX.
+The spreadsheet should be centered. An example is shown in the table
+\ref{tab:efficiency_of_processes}.
+
+The title of the spreadsheet with the serial number of the spreadsheet and a short description should be
+above the spreadsheet. The short description of the spreadsheet should start with a capital letter and
+end with a final punctuation mark. There should be a 1 between the text and the spreadsheet title
+(blank) line space, as in a spreadsheet
+\ref{tab:ucinkovitost_procesov}, unless the title of the spreadsheet is at the very top
+pages. There should be 2 empty lines between the table and the continuation of the text.
+
+\begin{table}[ht!]
+\caption{Efficiency of different removal processes
+o\-nes\-na\-al\-val\-pipe of water \cite{bazant_1991}.}
+\label{tab:efficiency_of_processes}
+\centering
+\begin{tabular}{|l|@{}c|@{}c|@{}c|@{}c@{}|}
+\hline
+\multirow{4}*{\minitab[c]{Process}} &
+\multirow{4}*{\minitab[c]{Removal\\micro-\\organisms}} &
+\multirow{4}*{\minitab[c]{Removal\\suspended\\substances}}&
+\multirow{4}*{\minitab[c]{Removal\\dissolved\\inorganic\\substances}}&
+\multirow{4}*{\minitab[c]{Removal\\dissolved\\organic\\substances}}\\
+&&&&\\
+&&&&\\
+&&&&\\
+\hline
+\textbf{Biological}&&&&\\
+\hline
+\quad Active &
+\multirow{2}*{\minitab[c]{+}} &
+\multirow{2}*{\minitab[c]{+}} &
+\multirow{2}*{\minitab[c]{-}} &
+\multirow{2}*{\minitab[c]{+}}\\
+\quad mud & & & &\\
+\hline
+\quad Anaerobic &
+\multirow{2}*{\minitab[c]{-}} &
+\multirow{2}*{\minitab[c]{+}} &
+\multirow{2}*{\minitab[c]{-}} &
+\multirow{2}*{\minitab[c]{+}}\\
+\quad processing & & & &\\
+\hline
+
+\quad Biofilters & - & - & - & +\\
+\hline
+\textbf{Chemical}&&&&\\
+\hline
+\quad Chlorination & + & + & - & +\\
+\hline
+\quad Ozonation & + & + & - & $\circ$\\
+\hline
+\quad Coagulation & + & + & - & +\\
+\hline
+\textbf{Physical}&&&&\\
+\hline
+\quad Adsorption &
+\multirow{2}*{\minitab[c]{}} &
+\multirow{2}*{\minitab[c]{}} &
+\multirow{2}*{\minitab[c]{}} &
+\multirow{2}*{\minitab[c]{}}\\
+\quad per active. charcoal:& & & &\\
+\hline
+\quad \quad in granules & - & + & - & +\\
+\hline
+\quad \quad in powder & + & + & - & +\\
+\hline
+\quad Conventional &
+\multirow{2}*{\minitab[c]{-}} &
+\multirow{2}*{\minitab[c]{+}} &
+\multirow{2}*{\minitab[c]{-}} &
+\multirow{2}*{\minitab[c]{-}}\\
+\quad filtration& & & &\\
+\hline
+\quad Flocculation&
+\multirow{2}*{\minitab[c]{+}} &
+\multirow{2}*{\minitab[c]{+}} &
+\multirow{2}*{\minitab[c]{-}} &
+\multirow{2}*{\minitab[c]{-}}\\
+\quad + sediment. &&&&\\
+\hline
+\quad Membrane&
+\multirow{2}*{\minitab[c]{}} &
+\multirow{2}*{\minitab[c]{}} &
+\multirow{2}*{\minitab[c]{}} &
+\multirow{2}*{\minitab[c]{}}\\
+\quad processes&&&&\\
+\hline
+\quad \quad MF & + & + & - & -\\
+\hline
+\multicolumn{5}{l}{\scriptsize{Legend: + removal in progress
+efficient, $\circ$ removal partially takes place, - removal does not
+in progress}} \\
+\end{tabular}
+\end{table}
+
+If a table or part of a table is taken from another source, it is required
+to quote. If the entire table is summarized, the reference number is written k
+description of the spreadsheet. If only certain values or text within are summarized
+cells, this can be quoted in individual cells or at the end of an individual line.
+
+Tables must be legible, clear and transparent. Under a spreadsheet or image
+can be done with a smaller font size \verb|\footnotesize| or \verb|\scriptsize|
+write down any notes or e.g. legend as shown in the table
+\ref{tab:efficiency_of_processes}. All tables and figures must be
+(previously) mentioned in the text and also explained in more detail.
+
+The table should be sensibly placed in the text. We usually place the spreadsheet
+under the paragraph in which the spreadsheet is mentioned for the first time. If the spreadsheet because of more
+of the fluid formatting of the text is placed differently, it should definitely be placed in
+near the first mention in the text.
+
+If possible, we display each spreadsheet (or image) on one page. If
+due to the size of the spreadsheet, it is not possible to avoid dividing it into several pages,
+at the end of each page (if the table continues on the next page) to the right
+write "to be continued" below, to the next page (where the spreadsheet
+continues) and "continuation" in the top left. Be sure to repeat on each page
+print the entire header of the spreadsheet, and number the columns if necessary. For such
+cases it makes sense to use the \verb|longtable| package as already used in v
+List of used symbols.
+
+\section{Images}\label{sec:images}
+
+Images should be numbered consecutively, which is automatically taken care of by \LaTeX. A picture
+should be centered. An example is shown in the figure
+\ref{fig:image_microscope}.
+
+\begin{figure}[ht!]
+\begin{centering}
+\includegraphics[scale=1.0]{images/image_microscope}
+\caption{Image taken with an electron microscope
+\cite{stropnik_1997}.}
+\label{fig:picture_microscope}
+\end{centering}
+\end{figure}
+
+\begin{figure}[ht!]
+\begin{centering}
+\includegraphics[scale=1.0]{images/some_molecules}
+\caption{Schematic representation of the polymerization process
+\cite{stropnik_1997,Doe_1991}.} \label{fig:some_molecules}
+\end{centering}
+\end{figure}
+
+The title of the image with the serial number of the image and a short description should be below the image,
+centered with respect to the image and text. The image description should start with a capital
+initial and ends with a final punctuation mark. It is recommended that the names or
+the descriptions of the pictures (as well as the tables) are short, as it is from the point of view of later production
+index of images (or spreadsheets) is more appropriate.
+
+Images must be legible, clear and transparent. The pictures must be good
+quality and in the Slovenian language. If there is a diagram in the picture, there must be magnitudes
+and units of all axes clearly and consistently marked. In microscopic images, it must
+be a properly marked length scale. Images that are mapped with optical
+readers should be in the best possible resolution. Pictures that you create yourself with
+programs such as CorelDraw, Photoshop, PowerPoint, etc. should be saved in
+*.emf (Enhanced Metafile) or *.eps (Encapsulated
+PostScript). In this way, they will be when converting the document to *.pdf format
+preserved all the details in the image and will also be guaranteed when printing
+the highest possible quality.
+
+Each image (e.g. also the images \ref{fig:neke_molekule} and \ref{fig:2_graph}) should
+will be meaningfully placed in the text. We usually place the image below the paragraph, v
+which we mention her for the first time. If the image due to more fluid formatting of the text
+placed differently, it should definitely be placed near the first mention in the text. If
+the pictures are placed one below the other, they should be between the title of the first picture and drugo
+picture 2 empty lines.
+
+\begin{figure}
+\begin{subfigure}[b]{.45\linewidth}
+\centering \includegraphics[scale=0.7]{images/graph_1}
+\caption{}\label{subfig:graph1}
+\end{subfigure}%
+\quad
+\begin{subfigure}[b]{.45\linewidth}
+\centering \includegraphics[scale=0.7]{images/graph_2}
+\caption{}\label{subfig:graph2}
+\end{subfigure}
+
+\caption{(a) Dependence of the proportion of missed shots in the addiction competition
+from the training time preceding it and (b) deformation as a function of time
+loads for two different samples.}\label{fig:2_graph}
+\end{figure}
+
+\begin{figure}[ht!]
+\begin{centering}
+\includegraphics[scale=1.0]{images/voda_in_nekej}
+\caption{Time sequence of a projectile falling into water from a height of (a) 2.1 m;
+and (b)
+4.1 m \cite{Loukides_2020}.} \label{fig:voda_in_nekej}
+\end{centering}
+\end{figure}
+
+As shown in the pictures \ref{fig:2_graph} and \ref{fig:voda_in_nekej}, you can
+combine several related diagrams into one image, clearly separating them on
+subassemblies, i.e. (a) and (b), while paying attention to transparency.
+
+If the image is taken from a specific source, it must be cited as such
+shown in the picture \ref{fig:picture_microscope}. Also all pictures by other authors
+must be cited.
+
+\section{Equations}\label{sec:equations}
+
+Formulation of the equation is automatic in \LaTeX. The explanation of the equation must be in
+to the text.
+\begin{equation}\label{eqn:e}
+e = m\,c^2
+\end{equation}
+\begin{equation}\label{eqn:e_cel}
+e_{\text{cel}}=\sum_{i=1}^{n}\,m_{i}c^2
+\end{equation}
+\begin{equation}\label{eqn:Nu}
+N_{\text{u}} = \frac{0{,}34}{Pr_{\text{L},i}\cdot 2{,}3A}
+\end{equation}
+
+In the rest of the text, if necessary, reference is made to the corresponding number
+equations, e.g. to the equation \eqref{eqn:e}.
+
+We usually use Latin and Greek letters for size labels and other symbols
+alphabet, sometimes with the addition of indices and other characters. As shown in Eqs
+\eqref{eqn:e_cel} and \eqref{eqn:Nu}, must be symbols, i.e. labels of quantities,
+e.g. $e$ or $Pr$, written in italics. Not behind the symbol
+we place dots, unless the sentence ends with a symbol.
+
+Indices are usually used when two quantities have the same symbol, or if
+we want to define the quantity additionally (e.g. $_{\text{max}}$ as the largest,
+$_{\text{cel}}$ as whole, $_{\text{z}}$ as initial, etc.). Indexes that
+denote physical quantities, written in italics, descriptive
+indexes that serve for additional definition of quantities, e.g. "whole" v
+$e_{\text{cel}}$ or "L" in $Pr_{\text{L},i}$ must be written in normal
+(vertical) press. We also write indices that consist of numbers in
+to normal (upright) print (e.g. $A_1$), subscripts from letters denoting counts
+or numbers (e.g. "i" in $m_i$ or in $Pr_{\text{L},i}$) are written in italics
+(italic) print.
+
+For correct specification of physical quantities, constants, indices and others
+elements in the equations, please note the "Recommendations to the authors of academic and professional
+of publications at the Faculty of Mechanical Engineering in Ljubljana" by the author
+senior lecturer~dr.~Stropnik \cite{stropnik_1997}.
+
+\section{Citing and citing sources}\label{sec:citing}
+
+When citing sources, use the Slovenian version of the IEEE standard. Citation
+or citation of sources does not only apply to final works, but also in general to
+any representation in which intellectual or material are used
+property of other authors. Use as many resources as possible
+\textbf{newer relevant international professional} literature. Online resources
+pages/internet can represent \textbf{maximum 25\%} of all resources,
+used in the final part (not articles).
+
+The IEEE standard is mainly used in computer, electrical,
+telecommunications and engineering fields. Each contains three basic data
+source:
+\begin{itemize}
+\item The author, who is written as the first letter of the name and the full last name, (J.
+Novak).
+\item Title of article, patent, conference paper,... in duplicate
+they dictate ("Modal analysis").
+\item Journal or book title in italics (\emph{Stability of
+Structures: Elastic, Inelastic, Fracture, and Damage Theories})
+\end{itemize}
+Thus, the reader quickly finds the source of the information. All data, pages, collections,
+editions... differ from each other depending on the type of resource and are required
+several times to find out additionally.
+
+All used literature is listed in the text of the assignment in order
+numbers in \textbf{square brackets}, so there should also be a list of the bibliography
+numbered according to the order in which the citations appear in the document. There are examples
+shown in the following sentences:
+\begin{itemize}
+\item An overview is given in the work of Bažant and colleagues \cite{bazant_1991}
+influences on the stability of structures. \emph{You can also:}
+\item In the work of Bažant et al. \cite{bazant_1991} an overview of the influences on
+stability of structures.
+\item In 2008, Bažant and Cedolin \cite{Bazant_2008} presented
+the use of modal analysis in analyzing the stability of structures.
+\item The model is listed in \cite{Doe_1991}. (\emph{it is not necessary to write: "vliterature \cite{Doe_1991}«}.)
+\item When citing several works, it is recommended that they be separated by square brackets
+brackets e.g.: ...recalculation of the model was used by \cite{bazant_1991},
+\cite{Doe_1991}, \cite{Bazant_2008}; (also acceptable
+\cite{bazant_1991,Doe_1991,Bazant_2008})
+\item When you quote several works and they follow one another, e.g. ...economical
+the impact on performance is pursued by \cite{bazant_1991}-\cite{Bazant_2008};
+(also acceptable \cite{bazant_1991, stropnik_1997,
+Doe_1991,Loukides_2020, Bazant_2008})
+\end{itemize}
+
+The serial number of the source cited in square brackets is
+repeated in the list of literature (see \ref{sec:zzorci_lit}
+\nameref{sec:zzorci_lit}), when referring to the same reference again later
+but we use the same number as for the first reference. All this is in \LaTeX u
+performed automatically, but the final control is definitely not superfluous.
+
+The list of used literature should be left aligned (eng. align left) and
+designed according to the examples in this template (see chapters \ref{sec:examples_lit}
+\nameref{sec:zzorci_lit} and 7 Literature).
+
+When referring to a source, we can use "et
+al.", for example: In the work of Bažant et al. \cite{bazant_1991} an overview is given
+of influences\ldots
+
+Samples of the bibliography are given below. By specifying the listed and (or)
+other relevant data from sources, such as: conference papers,
+patents, standards, regulations, prospectuses, studies, other diplomas, or at
+When citing literature, please also consider:
+\begin{itemize}
+\item SIST ISO 690: 1987(E) Documentation – Bibliographic references:
+Content, form and structure; and
+\item SIST ISO 690 – 2 : 1997(E) : Electronic documents or parts thereof.
+\end{itemize}
+
+
+\subsection{Samples of literature list}\label{sec:zzorci_lit}
+
+\textbf{For books:}
+\begin{itemize}
+\item[{[1]}] Z.~P. Ba\v{z}ant and L.~Cedolin, \emph{Stability of Structures:
+Elastic, Inelastic, Fracture, and Damage Theories}.\hskip 1em plus
+0.5em minus
+0.4em\relax New York: Oxford University Press, 1991.\\
+
+\item[{[2]}]J.~Stropnik, \emph{Recommendations to authors of study and
+professional
+publications at the Faculty of Mechanical Engineering in Ljubljana}.\hskip 1em plus
+0.5em minus
+0.4em\relax Ljubljana: Faculty of Mechanical Engineering, 1997.
+\end{itemize}
+
+\textbf{For book chapters:}
+\begin{itemize}
+\item[{[3]}] J.~Doe, ``Earthquake stability,'' in \emph{Stability of
+Structures:
+Elastic, Inelastic, Fracture, and Damage Theories}, Z.~P. Pheasant and
+L.~Cedolin,
+ed.\hskip 1em plus 0.5em minus 0.4em\relax New York: Oxford University
+Press,
+1991, p. 124--157.
+\end{itemize}
+
+\textbf{For e-books:}
+\begin{itemize}
+\item[{[4]}] M.~Loukides and J.~Bruner, \emph{Building a Solid World},
+1st edition,
+Beijing, O'Reilly, [e-book], 2014. Available at:
+\url{https://doi.org/10.1093/acprof:oso/9780199343638.003.0004} [view 10
+June 2020].
+\end{itemize}
+
+\textbf{For magazines:}
+\begin{itemize}
+\item[{[5]}] Z.~P. Ba\v{z}ant and L.~Cedolin, ``Noise control,'' \emph{J.
+Sound
+Vib.}, No. 111, p. 42--50, 2008.\\
+\item[{[6]}] J.~Gonzalez-Gutierrez, J.~L. Carillo-Estrada and J.~C.
+Ruiz-Suarez,
+``Penetration of granular projectiles into a water target,''
+\emph{Scientific
+reports}, vol.~4, no. 6762, p. 1--5, 2014.
+\end{itemize}
+
+\textbf{For conference papers:}
+\begin{itemize}
+\item[{[7]}] Z.~P. Ba\v{z}ant and L.~Cedolin, ``Modal analysis,'' in
+\emph{Kuhljevi dnevi: Zbornik referatov}, B.~Podskrajnik (ed.), Ljubljana,
+2005, p. 2--5.\\
+
+\item[{[8]}] Z.~P. Ba\v{z}ant and L.~Cedolin, ``Modal analysis,'' v
+\emph{Proceedings of the 22nd Congress of Polymers}, S.~Smith (ed.), London,
+2007, p. 3--8.\\
+\end{itemize}
+
+\textbf{For online resources with a known author:}
+\begin{itemize}
+\item[{[9]}]C.~Kogoj, \emph{Modal analysis: selected chapters from {DTD}}.
+accessible at:
+\url{http://lab.fs.uni-lj.si/ldtd/Gradivo_za_studente/DTD/Pregled\%20teorije.pdf}
+[view: 11/01/2012].
+\end{itemize}
+
+\textbf{For publications of organizations (printed or published on the web
+pages):}
+\begin{itemize}
+\item[{[10]}] \emph{Annual report of the company {M}erkur d.d. {K}ranj}, {Mercury
+d.d., Kranj}, 2005.\\
+
+\item[{[11]}] \emph{{Statistical yearbook of the Republic of Slovenia 2009}},
+Statistical Office of the Republic of Slovenia, Ljubljana, 2009.\\
+
+\item[{[12]}]\emph{Standard Classification of Activities 2005}, {Statistical
+office
+Republic of Slovenia}. accessible at:
+\url{http://www.stat.si/klas/tabela.aspx?cvn=1895}
+[view: 10/01/2012].
+\end{itemize}
+
+\textbf{For websites of organizations, societies, individuals:}
+\begin{itemize}
+\item[{[13]}] \emph{M Kariera - Employment portal}. accessible at:
+\url{http://www.mercator.si/kariera} [view: 10/01/2012].
+\end{itemize}
+
+\textbf{For online databases, encyclopedias, dictionaries, etc.:}
+\begin{itemize}
+\item[{[14]}] ``Engineering,'' in \emph{Encyclopedia Britannica online}.
+accessible at:
+\url{http://student.britannica.com/comptons/article-9274119/engineering}
+[view: 8/1/2012].\\
+
+\item[{[15]}] ``Business Application,'' in \emph{eSlovar}. accessible at:
+\url{http://www.eslovar.com/besedilo.asp?id=1563} [viewed: 8 January 2012].
+\end{itemize}
+
+\textbf{For legislation (official documents, regulations, standards):}
+\begin{itemize}
+\item[{[16]}] \emph{Act on Commercial Companies}, {Official Gazette of the RS no.
+42/2006, 60/2006 app., 26/2007-ZSDU-B, 33/2007-ZSReg-B, 67/2007-ZTFI
+(100/2007
+app.), 10/2008, 68/2008, 23/2009; Sec. US: U-I-268/06-35.\\
+
+\item[{[17]}] \emph{Act on Environmental Regulations}, {Official Gazette of the RS no.
+72/2009-UPB2, 65/2010.\\
+
+\item[{[18]}] {ISO 2573:1977}: \emph{Tensile testing systems –
+Determination of
+K-value}, {ISO 2573:1977}.\\
+
+\item[{[19]}] \emph{Determination of surface roughness values R$_a$, R$_z$,
+R$_{max}$}, {DIN 4768:1990}.\\
+
+\item[{[20]}] \emph{Geometrical product specifications (GPS) profile method
+–
+Terms, definitions and surface texture parameters}, {JIS B 0601:2001}.
+\end{itemize}
+
+\textbf{For doctoral theses and other final works:}
+\begin{itemize}
+\item[{[21]}] A.~Novak, \emph{Manufacturing an automated peeling machine
+krompirja}, doctoral dissertation, Ljubljana, 2015.
+\end{itemize}
+
+The bibliography is performed automatically in \LaTeX, based on your database
+bibliography (which, in the case of a proposal, is located at References.bib) and selected
+macros that generate the \TeX~bibliography syntax accordingly. For finishing works on
+For the Faculty of Mechanical Engineering, a corresponding macro has been prepared, which is located in
+fs\_final\_tasks.bst. You define its use with a command
+\verb|\bibliographystyle{IEEEtran_slo}| in the main file.
+
+References to the literature inventory are automatically generated, e.g.: \cite{bazant_1991},
+\cite{Doe_1991}, \cite{Bazant_2008}, \cite{Gonzalez_2014, Bazant_2005}
+\cite{Bazant_2007, Kogoj_DTD, Merkur_2005, SURS_2009, SURS_2005, MKariera,
+Encyclopedia, Posl_app, ZGD, ZOP}, \cite{ISO_2573}, \cite{DIN_4768} and
+\cite{JISB0601, Novak_2015}.
