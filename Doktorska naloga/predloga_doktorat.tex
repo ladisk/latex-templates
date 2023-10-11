@@ -65,6 +65,7 @@
 \checkoddpage
 \ifoddpage
 \else
+\thispagestyle{fancy_nohead}
 \mbox{}
 \newpage
 \fi}
@@ -129,25 +130,31 @@
 \pagenumbering{arabic}
 \input{uvod/uvod}
 \newpage
+\addifeven
 
 
 \input{teorija/teoreticneOsnove}
 \newpage
+\addifeven
 
 
 \input{metodologija/metodologija}
 \newpage
+\addifeven
 
 
 \input{rezultati/rezultati}
 \newpage
+\addifeven
 
 
 \input{diskusija/diskusija}
 \newpage
+\addifeven
 
 \input{zakljucki/zakljucki}
 \newpage
+\addifeven
 
 \bibliographystyle{IEEEtran_slo}
 
