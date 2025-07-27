@@ -137,7 +137,7 @@ FUNCTION {default.name.latex.cmd}{ "" }
 
 
 % The default URL prefix.
-FUNCTION {default.name.url.prefix}{ "dostopno na:" }
+FUNCTION {default.name.url.prefix}{ "Dostopno na:" }
 
 
 % Other controls that cannot be accessed via IEEEtranBSTCTL entry type.
