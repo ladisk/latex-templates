@@ -11,8 +11,11 @@
 \Large{\textbf{\avtor}}\\
 \vspace{5cm}
 \large{
-Mentor: \mentor\\
-Somentor: \somentor
+	Mentor: \mentor\\
+	\if\relax\detokenize\expandafter{\somentor}\relax
+	\else
+	Somentor: \somentor\\
+	\fi
 }
 \vfill
 \large{Ljubljana, \zagovorMesec~\zagovorLeto}

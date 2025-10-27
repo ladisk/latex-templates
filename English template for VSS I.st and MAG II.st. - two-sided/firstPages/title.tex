@@ -10,9 +10,13 @@
 \vspace{2cm}
 \Large{\textbf{\author}}\\
 \vspace{5cm}
+
 \large{
-Mentor: \menthor\\
-Co-mentor: \comenthor
+	Mentor: \mentor\\
+	\if\relax\detokenize\expandafter{\comentor}\relax
+	\else
+	Co-mentor: \comentor\\
+	\fi
 }
 \vfill
 \large{Ljubljana, \defenseMonth~\defenseYear}
