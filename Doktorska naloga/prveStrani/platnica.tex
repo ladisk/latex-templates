@@ -1,17 +1,25 @@
 % -*- TeX:SI -*-
 % Platnica
 \thispagestyle{empty}
+
+\newcommand{\predloziti}{%
+	\if\avtorSpol m
+	Predložil%
+	\else
+	Predložila%
+	\fi
+}
+
 \begin{center}
 \large \mbox\par\par\vspace*{-0.75cm} \textbf{UNIVERZA V LJUBLJANI}
 \\ \vspace{0.2cm} \large{Fakulteta za strojništvo}
-\\ \vspace*{6cm} \LARGE{\textbf{[Naslov doktorskega dela na Fakulteti za strojništvo]}}
-% brez oglatih oklepajev v končni verziji -- to velja za vsa polja, kjer vnašate svoje podatke (npr. naslov, ime in priimek, datum, mentor, ....)
+\\ \vspace*{6cm} \LARGE{\textbf{\naslovSlo}}
 \\ \vspace{1cm} \normalsize
-\large{Doktorsko delo}\\
+\large{\tipDela}\\
 \vspace{2cm}
-\large{Predložil(-a) Fakulteti za strojništvo Univerze v Ljubljani za pridobitev znanstvenega naslova doktor znanosti}\\
+\large{\predloziti~Fakulteti za strojništvo Univerze v Ljubljani za pridobitev znanstvenega naslova doktor znanosti}\\
 \vspace{2.5cm}
-\Large{\textbf{[Janez Novak]}}\\
+\Large{\textbf{\avtor}}\\
 \vfill
-\large{Ljubljana, [mesec zagovora] [leto zagovora]}
+\large{Ljubljana, \zagovorMesec~\zagovorLeto}
 \end{center} 
