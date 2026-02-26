@@ -1019,9 +1019,44 @@ FUNCTION {convert.edition}
 %% LATEX BIBLIOGRAPHY CODE %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Natbib compatibility: extracts first author's last name and year
+% Format: Author(Year) for natbib numerical mode
+FUNCTION {format.lab.names}
+{ 's :=
+  s #1 "{vv~}{ll}" format.name$
+  s num.names$ duplicate$
+  #2 >
+    { pop$ " et~al." * }
+    { #2 <
+        'skip$
+        { s #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
+            { " et~al." * }
+            { " in " * s #2 "{vv~}{ll}" format.name$ * }
+          if$
+        }
+      if$
+    }
+  if$
+  "(" *
+  year duplicate$ empty$
+    { pop$ "????" }
+    { }
+  if$
+  * ")" *
+}
+
 FUNCTION {start.entry}
 { newline$
-  "\bibitem{" write$
+  "\bibitem[" write$
+  author empty$
+    { editor empty$
+        { "" }
+        { editor format.lab.names }
+      if$
+    }
+    { author format.lab.names }
+  if$
+  "]{" * write$
   cite$ write$
   "}" write$
   newline$
