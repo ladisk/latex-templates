@@ -1,0 +1,32 @@
+% Platnica, njena prazna hrbtna stran in prazen vezni list.
+\pagestyle{empty}
+\hypersetup{pageanchor=false}
+\input{prveStrani/platnica}
+
+\clearpage
+\praznastran
+\praznastran
+\praznastran
+
+% Štetje formalnih strani se začne z notranjo naslovnico (i).
+\pagenumbering{roman}
+\hypersetup{pageanchor=true}
+\input{prveStrani/naslovnica}
+
+\cleardoublepage
+
+\IfFileExists{\datotekaTeme}{%
+  \includepdf[pages=-,pagecommand={\thispagestyle{empty}}]{\datotekaTeme}
+}{%
+  \thispagestyle{empty}
+  [Prostor za odločbo o potrjeni temi doktorskega dela s strani UL. Datoteko
+  \texttt{tema.pdf} shranite ob glavni datoteki \texttt{predloga.tex}.]
+  \clearpage}
+
+\cleardoublepage
+
+\pagestyle{fancy_nohead}
+
+\ifzahvala\input{prveStrani/zahvala}\fi
+\input{prveStrani/izvlecek}
+\input{prveStrani/kazala}

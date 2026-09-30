@@ -1,0 +1,52 @@
+% !TeX program = xelatex
+% !TeX spellcheck = sl_SI
+% Na osnovi predlog LADISK (Martin Česnik, Janko Slavič), posodobitev 2026.
+\documentclass[12pt,a4paper,twoside,openright,fleqn]{book}
+\input{nastavitve}
+\input{podatki}
+
+\begin{document}
+\input{prveStrani/prveStrani}
+\input{oznake/oznake}
+
+\cleardoublepage
+\pagenumbering{arabic}
+\pagestyle{vsebina}
+\input{uvod/uvod}
+\input{teorija/teoreticneOsnove}
+\input{hipoteze/hipoteze}
+\input{metodologija/metodologija}
+\input{rezultati/rezultati}
+\input{diskusija/diskusija}
+\input{zakljucki/zakljucki}
+
+\cleardoublepage
+
+\renewcommand{\bibsection}{%
+	\chapter*{Literatura}%
+	\markboth{Literatura}{}%
+	\phantomsection
+	\addcontentsline{toc}{chapter}{\protect\brezzamika Literatura}%
+	\label{cha:literatura}%
+}
+
+\bibliographystyle{FS2026}
+\bibliography{References}
+
+% Strani za literaturo nimajo glave, le številko strani (kot v Wordu).
+\clearpage
+\pagestyle{fancy_nohead}
+
+% Načrt ravnanja z raziskovalnimi podatki je obvezen.
+\input{nrrp/nrrp}
+
+% Priloge so neobvezne; po potrebi odstranite naslednji vnos.
+\input{dodatki/dodatek}
+
+\input{zivljenjepis/zivljenjepis}
+
+% Zaključni prazen list (dve povsem prazni strani).
+\cleardoublepage
+\praznastran
+\praznastran
+\end{document}

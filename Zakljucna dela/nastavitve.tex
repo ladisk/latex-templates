@@ -1,0 +1,144 @@
+% Oblikovanje po Wordovi predlogi FS, september 2026.
+\usepackage{iftex}
+\ifPDFTeX
+  \PackageError{FS2026}{Uporabite XeLaTeX ali LuaLaTeX}{Pisava Times New Roman zahteva XeLaTeX ali LuaLaTeX.}
+\fi
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setmonofont{Latin Modern Mono}[Scale=MatchLowercase]
+\usepackage[english,slovene]{babel}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx}
+\usepackage[section]{placeins}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array}
+\usepackage{fancyhdr}
+\usepackage{tocloft}
+\usepackage{titlesec}
+\usepackage{pdfpages}
+\usepackage{pdflscape}
+\usepackage{caption,subcaption}
+\usepackage{icomma}
+\usepackage{etoolbox}
+\usepackage{notoccite}
+\usepackage[numbers,square,sort&compress]{natbib}
+\usepackage[inner=30mm,outer=25mm,top=30mm,bottom=25mm,headheight=15pt]{geometry}
+\usepackage[unicode,hidelinks]{hyperref}
+
+% Umerjeno po dejanskem razmiku osnovnic v Wordovem PDF-ju (pribl. 15,9 bp).
+% Times New Roman ima v XeLaTeXu drugačne metrike, zato faktor ni neposredno 1,15.
+\linespread{1.10}
+\setlength{\parindent}{0pt}
+% Sosednja odmika Wordovih odstavkov po 8 pt se ne seštevata.
+\setlength{\parskip}{8pt}
+\raggedbottom
+\setlength{\emergencystretch}{1em}
+\setlength{\mathindent}{5mm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\setlist[itemize,1]{label=\textbullet,leftmargin=7.5mm,itemsep=2pt,parsep=0pt,topsep=2pt}
+\setlist[itemize,2]{label=\(\circ\),leftmargin=7.5mm,itemsep=8pt,parsep=0pt,topsep=2pt}
+\setlist[enumerate]{leftmargin=*,itemsep=2pt,parsep=0pt}
+\DeclareCaptionFont{fsfont}{\fontsize{11}{12.65}\selectfont}
+\captionsetup{font=fsfont,labelsep=colon}
+\captionsetup[table]{position=top,justification=raggedright,singlelinecheck=false,skip=4pt}
+\captionsetup[figure]{position=bottom,justification=centering,skip=4pt}
+\captionsetup[subfigure]{labelfont=normalfont}
+% \@floatboxreset znotraj plavajočega okolja kliče \normalsize, zato velikost
+% pisave v preglednicah nastavimo za njim (\AtBeginEnvironment{table} ne deluje)
+\makeatletter
+\appto\@floatboxreset{\ifdefstring{\@captype}{table}{\fontsize{10}{11.5}\selectfont}{}}
+\makeatother
+\addto\captionsslovene{\renewcommand{\tablename}{Preglednica}\renewcommand{\bibname}{Literatura}}
+\setlength{\textfloatsep}{12pt}
+\setlength{\intextsep}{12pt}
+\newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
+\renewcommand{\thetable}{\thechapter.\arabic{table}}
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+
+\titleformat{\chapter}[hang]{\fontsize{24}{27.6}\selectfont\bfseries}{\thechapter}{1em}{}
+\titleformat{name=\chapter,numberless}[hang]{\fontsize{24}{27.6}\selectfont\bfseries}{}{0pt}{}
+% Odmiki so umerjeni po prvi oštevilčeni strani Wordove predloge.
+\titlespacing*{\chapter}{0pt}{111pt}{36pt}
+\titleformat{\section}{\fontsize{18}{20.7}\selectfont\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{15.25pt}{6pt}
+\titleformat{\subsection}{\fontsize{14}{16.1}\selectfont\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{18pt}{6pt}
+\titleformat{\subsubsection}{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\subsubsection}{0pt}{12pt}{3pt}
+\renewcommand{\cftchapdotsep}{\cftdotsep}
+% Naslovi prve ravni (\chapter) so v kazalu veliki 16 pt.
+\renewcommand{\cftchapfont}{\fontsize{16}{19.27}\selectfont\bfseries}
+\renewcommand{\cftchappagefont}{\fontsize{16}{19.27}\selectfont\bfseries}
+% Naslovi druge ravni (\section) so v kazalu izpisani krepko.
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsecpagefont}{\bfseries}
+% Navpični razmiki v kazalu so umerjeni po Wordovi predlogi (razmiki osnovnic:
+% poglavje-poglavje 29,2 pt, poglavje-razdelek 27,5 pt, razdelek-razdelek 26 pt,
+% razdelek-podrazdelek 21,8 pt). Odstavek vpisa poglavja se konča v njegovi
+% pisavi, da velja razmik vrstic 16-pt pisave; kern za vpisom ne vpliva na \addvspace.
+\setlength{\cftbeforechapskip}{6.3pt}
+\setlength{\cftbeforesecskip}{10.1pt}
+\setlength{\cftbeforesubsecskip}{5.9pt}
+\renewcommand{\cftchapafterpnum}{\fontsize{16}{19.27}\selectfont\par\kern1.7pt}
+
+\fancypagestyle{fancy_nohead}{%
+  \fancyhf{}\fancyfoot[LE,RO]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}}
+\fancypagestyle{plain}{%
+  \fancyhf{}\fancyfoot[LE,RO]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\fancypagestyle{vsebina}{%
+  \fancyhf{}
+  \fancyhead[LE,RO]{\nouppercase{\leftmark}}
+  \fancyfoot[LE,RO]{\thepage}
+  \renewcommand{\headrulewidth}{0.1mm}
+  \renewcommand{\footrulewidth}{0pt}}
+
+% Povsem prazna stran brez številke in glave (npr. vezni list).
+\newcommand{\praznastran}{\null\thispagestyle{empty}\newpage}
+\makeatletter
+% Soda prazna stran pred novim poglavjem ima, kot v Wordu, številko in glavo
+% trenutnega sloga strani (na naslovnih straneh je slog empty).
+\renewcommand{\cleardoublepage}{\clearpage\if@twoside\ifodd\c@page\else\null\newpage\fi\fi}
+\newcommand{\vsebinskokazalo}{\begingroup\setlength{\parskip}{0pt}\@starttoc{toc}\endgroup}
+\makeatother
+% Združljivost s starimi poglavji; novih ročnih praznih strani ni treba dodajati.
+\newcommand{\addifeven}{\cleardoublepage}
+
+% Formalni naslovi na vrhu strani; samo seznama se vpišeta v kazalo.
+\newcommand{\predpoglavje}[1]{%
+  \cleardoublepage\thispagestyle{fancy_nohead}\markboth{#1}{}
+  % Umerjeno po Wordu: osnovnica naslova 104 pt od vrha strani, zgornji rob
+  % črte 7,8 pt pod osnovnico (neodvisno od spodnjih zank črk), prva vrstica
+  % besedila 35,6 pt pod črto.
+  \vspace*{-23.6pt}{\fontsize{18}{20.7}\selectfont\bfseries #1\par}
+  \nobreak\vskip-\prevdepth\vskip7.6pt\hrule height 0.4pt\nobreak\vspace{19.2pt}}
+\newcommand{\predpoglavjevkazalu}[1]{%
+  \predpoglavje{#1}\phantomsection\addcontentsline{toc}{chapter}{\protect\brezzamika #1}}
+% Neoštevilčeni vpisi v kazalu nimajo visečega zamika druge vrstice (kot v Wordu).
+% Ukaz ponastavi levi zamik (globalno, ker je vpis v skupini; privzeta vrednost
+% je tako in tako 0) in izravna začetni odmik tocloft.
+\newcommand{\brezzamika}{\global\leftskip=\cftchapindent\relax\hskip\cftchapnumwidth\relax}
+\AtBeginDocument{\pdfstringdefDisableCommands{\let\brezzamika\relax}}
+\newcounter{priloga}
+\renewcommand{\thepriloga}{\Alph{priloga}}
+\newcommand{\priloga}[1]{%
+  \refstepcounter{priloga}
+  \chapter*{Priloga \Alph{priloga} -- #1}
+  \phantomsection
+  \addcontentsline{toc}{chapter}{\protect\brezzamika Priloga \Alph{priloga} -- #1}
+  \markboth{Priloga \Alph{priloga}}{}
+  \renewcommand{\thechapter}{\Alph{priloga}}
+  \setcounter{figure}{0}\setcounter{table}{0}\setcounter{equation}{0}}
+\setlength{\bibsep}{8pt}
+\renewcommand{\bibfont}{\normalfont\normalsize}
+\urlstyle{same}
+\AtBeginDocument{\hypersetup{pdftitle={\naslovSlo},pdfauthor={\avtor},pdfsubject={\tipDela}}}
+
+\newcommand{\poglavjeref}[1]{%
+	\textbf{\ref{#1}~\nameref{#1}}%
+}

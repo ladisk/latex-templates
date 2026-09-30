@@ -1,0 +1,132 @@
+\priloga{Podrobna navodila za oblikovni izgled zaključnih del na FS}\label{cha:priloga}
+% Ukazov, zapisanih z \verb, ni mogoče deliti, zato dovolimo večje presledke.
+\setlength{\emergencystretch}{3em}
+Priloga ali priloge so lahko dodane le \textbf{izjemoma}. Vsebujejo naj informacije, ki so sicer potrebne za prikaz celovitosti, bi pa motile osnovno poročilo, ker bi bralcu odvračale pozornost od osnovne teme. Sem spadajo npr.~daljša izvajanja enačb, numerični izračuni, ponavljajoči se diagrami, odseki programskih kod in drugo. Ta dokument vsebuje prilogo, v kateri so predstavljene podrobnosti glede ustrezne uporabe predloge za zaključna dela in navodil za oblikovanje dokumenta, ki jih je potrebno upoštevati pri izdelavi zaključne naloge.
+
+Kot je razvidno iz te predloge, tako naslov poglavja \textbf{Literatura} kot tudi naslovi morebitnih prilog (npr.~\textbf{Priloga A}) ne smejo biti oštevilčeni, morajo pa biti vključeni v kazalo. Morebitni naslovi na nižjih neoštevilčenih nivojih (npr.~podnaslovi v prilogah) ne smejo biti vključeni v kazalo.
+
+Na koncu dokumenta sta vstavljeni dve popolnoma prazni in neoštevilčeni strani, kar predstavlja prazen vstavljen list, podobno kot na začetku naloge takoj za glavno naslovnico. Gre za list, ki ga v primeru izdelave vezanega izvoda vstavijo v tiskarni in je namenjen ustrezni vezavi naloge.
+
+\section*{Urejanje in prevajanje predloge}
+V datoteki \texttt{podatki.tex} izpolnite podatke o nalogi, nato uredite izvlečka, zahvalo, sezname in vsebinske datoteke. Glavno datoteko \texttt{predloga.tex} prevajajte z XeLaTeXom in BibTeXom:
+\begin{verbatim}
+xelatex predloga.tex
+bibtex predloga
+xelatex predloga.tex
+xelatex predloga.tex
+\end{verbatim}
+Nameščena mora biti pisava Times New Roman. V TeXstudiu nastavite \texttt{predloga.tex} kot glavni dokument in izberite XeLaTeX.
+
+\section*{Formalne strani}
+Podpisano temo shranite kot \texttt{tema.pdf} ob glavno datoteko. Vključijo se vse njene strani. Če datoteke še ni, predloga izpiše nadomestno stran. Zahvalo izključite z ukazom \verb|\zahvalafalse|. Prazno polje \verb|\somentor| izpusti vrstico za somentorja. Številčenje se začne pri notranji naslovnici, izpis številk pa pri zahvali oziroma izvlečku. Uvod se začne na strani~1.
+
+\section*{Uporaba prednastavljenih slogov v predlogi}
+Za pisanje zaključne naloge uporabljajte to predlogo, v kateri so že \textbf{prednastavljeni slogi} za poenotenje končne oblike zaključnih nalog na FS. Slogi so nastavljeni v datoteki \texttt{nastavitve.tex}, zato jih ne spreminjajte. 
+\section*{Navodila za vstavljanje in oblikovni izgled preglednic}
+Preglednice se oštevilčijo samodejno s številko poglavja in zaporedno številko preglednice, ločenima s piko (npr.~2.1). Vsebina preglednic je samodejno izpisana v velikosti 10~pt. Preglednice morajo biti berljive, jasne in pregledne. Pod preglednico ali sliko se lahko z manjšo velikostjo pisave (10~pt ali 8~pt) zapišejo morebitne opombe ali npr.~legenda, kot je prikazano v preglednici~\ref{tab:ucinkovitost}. Na preglednice in slike se sklicujemo v normalnem tisku in z malo začetnico, tako kot v prejšnji povedi. Vse preglednice in slike morajo biti pred njihovo pojavitvijo v nalogi omenjene v besedilu in tudi širše pojasnjene.
+
+Širina preglednice naj ne presega dovoljene širine besedila na strani. V primeru vstavljanja preglednic, ki presegajo širino 15,5~cm, je potrebno preglednico vstaviti na samostojno stran z ležečo orientacijo. V ta namen preglednico postavite v okolje \verb|landscape| (paket \texttt{pdflscape}), ki preglednico samodejno postavi na novo stran z ležečo usmerjenostjo.
+
+Posamezno preglednico (ali sliko), če je le mogoče, prikažemo na eni strani. Če se zaradi velikosti preglednice ni mogoče izogniti njeni delitvi na več strani, na koncu vsake strani (če se preglednica nadaljuje na naslednji strani) desno spodaj napišemo 'se nadaljuje', na naslednjo stran (kjer se preglednica nadaljuje) levo zgoraj pa 'nadaljevanje'. Na vsaki strani obvezno ponovno natisnemo celotno glavo preglednice, stolpce pa po potrebi oštevilčimo. Za take preglednice uporabite okolje \verb|longtable|; primer ponovljene glave in oznak nadaljevanja je v datoteki \texttt{oznake/oznake.tex}.
+
+Preglednice morajo nujno vsebovati vodoravno obrobo na vrhu in na dnu (ukaza \verb|\toprule| in \verb|\bottomrule| paketa \texttt{booktabs}). Navpične stranske obrobe in notranje obrobe izbrišite, če s tem ni zmanjšana preglednost. Preglednice naj bodo poenotenega videza v celotni nalogi in naj ne bodo vstavljene kot slike.
+
+\section*{Navodila za vstavljanje in oblikovni izgled slik}
+Slike se oštevilčijo samodejno s številko poglavja in zaporedno številko slike, ločenima s piko (npr.~2.1). Več povezanih delov slike združite v eno sliko z okoljem \verb|subfigure|, kot to prikazuje slika~\ref{fig:diagrami}. 
+
+Slike morajo biti berljive, jasne in pregledne. Slike, ki so preslikane z optičnimi bralniki, naj bodo v čim boljši ločljivosti. Slike, ki jih ustvarjate sami s programi, kot so \emph{Inkscape}, \emph{CorelDraw}, \emph{Photoshop}, \emph{PowerPoint} idr., naj bodo shranjene v vektorskem formatu *.pdf ali izvožene z ločljivostjo 600~dpi v formatu *.png oz.~*.jpg. Na ta način bodo pri pretvarjanju dokumenta v *.pdf obliko ohranjene vse podrobnosti, pri tiskanju pa bo zagotovljena najvišja možna ločljivost. Pri velikosti slik bodite pozorni na količino informacij, ki jo sama slika nosi, in v skladu s tem prilagodite velikost slike (za preproste diagrame ni potrebno, da so razširjeni na polovico strani).
+
+\section*{Navodila za vstavljanje in oblikovni izgled enačb}
+Za vnos oštevilčene enačbe uporabite okolje \verb|equation|, takoj za začetkom okolja pa z ukazom \verb|\label{eq:...}| določite oznako za sklicevanje. Enačbe so poravnane 0,5~cm od levega roba besedila, kar je v predlogi že nastavljeno.
+
+Številke enačb se pišejo v okroglem oklepaju na koncu zadnje vrstice, v kateri se enačba nahaja. Številčenje enačbe se začne s številko 1.~ravni poglavja, v katerem se enačba nahaja, druga številka pa predstavlja zaporedno številko enačbe v tem poglavju. Številčenje je samodejno in se ob vstavljanju novih enačb samo posodobi.
+
+\section*{Sklicevanje na dele besedila}
+Na slike, preglednice, enačbe in poglavja se sklicujte z ukazom \verb|\ref{...}| oziroma za enačbe z ukazom \verb|\eqref{...}|, ki številko enačbe izpiše v okroglem oklepaju. Oznako elementa, na katerega se sklicujete, določite z ukazom \verb|\label{...}|. Ukaz izpiše le številko, zato besedo pred njo sklanjajte sami in jo s številko povežite z nedeljivim presledkom \verb|~|, npr.~\verb|na sliki~\ref{fig:tekstura}| ali \verb|v enačbi~\eqref{eq:F}|. Na ta način se bodo sklici ohranjali tudi, če boste npr.~v besedilo vrinili nove slike, preglednice ipd.
+
+Podobno se lahko sklicujete tudi na naslove poglavij. Ukaz \verb|\poglavjeref{...}| izpiše številko in naslov poglavja v krepkem tisku, npr.~\poglavjeref{sec:slike}.
+
+\section*{Popis literature}
+Popis uporabljene literature mora biti oblikovan v skladu s primeri, ki so navedeni v nadaljevanju. V predlogi popis literature iz podatkov v datoteki \texttt{References.bib} samodejno oblikuje slog \texttt{FS2026.bst}; v oklepaju je naveden ustrezni tip vnosa. Popis literature mora v splošnem obsegati:
+\begin{itemize}
+\item \textbf{za knjigo ali monografijo} (\verb|@book|):
+  \begin{itemize}
+  \item Avtor ali urednik: \emph{Naslov knjige}. Izdaja (če obstaja). Založba, kraj, letnica izdaje. DOI (če obstaja)
+  \end{itemize}
+\item \textbf{za poglavje v knjigi} (\verb|@incollection|):
+  \begin{itemize}
+  \item Avtor: Naslov poglavja. V: Urednik: \emph{Naslov knjige}. Izdaja (če obstaja). Založba, kraj in letnica izdaje, številka začetne in zadnje strani poglavja. DOI (če obstaja)
+  \end{itemize}
+\item \textbf{članek v reviji} (\verb|@article|):
+  \begin{itemize}
+  \item Avtor: Naslov članka. \emph{Ime revije} številka revije (letnica izdaje). DOI (če obstaja)
+  \end{itemize}
+\item \textbf{prispevek na konferenci} (\verb|@inproceedings|):
+  \begin{itemize}
+  \item Avtor: Naslov prispevka. V: Urednik: \emph{Naslov zbornika}. Kraj, letnica konference, številka začetne in zadnje strani prispevka (če obstaja). DOI (če obstaja)
+  \end{itemize}
+\item \textbf{spletne strani} (\verb|@misc| s poljema \verb|url| in \verb|urldate|):
+  \begin{itemize}
+  \item Avtor (če je naveden): Naslov prispevka. URL: spletna povezava, ogled: datum dostopa
+  \end{itemize}
+\item \textbf{zaključna dela in doktorske disertacije} (\verb|@phdthesis| oz.~\verb|@mastersthesis|):
+  \begin{itemize}
+  \item Avtor: \emph{Naslov dela}. Tip dela. Institucija, kraj, leto objave
+  \end{itemize}
+\end{itemize}
+
+Pri navedbi literature, ki ima več kot dva avtorja ali več kot dva urednika, navedite prva dva avtorja oz.~urednika in zaključite seznam s frazo \emph{et al.} Slog \texttt{FS2026.bst} to naredi samodejno, zato v datoteki \texttt{References.bib} navedite vse avtorje.
+
+Za navajanje virov, kjer oblika ni jasno opredeljena v prejšnjem odstavku, glejte primere vzorcev popisa literature v naslednjem poglavju. Pri tem upoštevajte priporočila standarda SIST ISO 690:2021.
+
+\subsection*{Vzorci popisa literature}
+\newenvironment{vzorecreferenc}%
+  {\begin{list}{}{\setlength{\leftmargin}{10.5mm}\setlength{\itemindent}{-10.5mm}%
+    \setlength{\itemsep}{6pt}\setlength{\parsep}{0pt}\setlength{\topsep}{0pt}}}%
+  {\end{list}}
+
+Za knjige:
+\begin{vzorecreferenc}
+\item K.~H. Grote, H.~Hefazi (ur.): \emph{Springer Handbook of Mechanical Engineering}. Springer, Cham, 2021. DOI: 10.1007/978-3-030-47035-7
+\item A.~F. Bower: \emph{Applied Mechanics of Solids}. 2. izdaja. CRC Press, Boca Raton, 2025. DOI: 10.1201/9781003617280
+\end{vzorecreferenc}
+
+Za poglavja v knjigi:
+\begin{vzorecreferenc}
+\item P.~Stephan, F.~Dammel, J.~M. Ochterbeck: Thermodynamics. V: K.~H. Grote, H.~Hefazi (ur.): \emph{Springer Handbook of Mechanical Engineering}. Springer, Cham, 2021, str.~61--128. DOI: 10.1007/978-3-030-47035-7\_3
+\end{vzorecreferenc}
+
+Za članke v revijah:
+\begin{vzorecreferenc}
+\item Y.~H. Tsao, D.~F. Evans \emph{et al.}: Long-Range Attractive Force Between Hydrophobic Surfaces Observed by Atomic Force Microscopy. \emph{Science} 262 (1993). DOI: 10.1126/science.8211182
+\item Y.~Zhang, C.~Duan \emph{et al.}: Differential Tooth Surface Modification Method for Reducing Vibration in Spiral Bevel and Hypoid Gears. \emph{Strojniški vestnik -- Journal of Mechanical Engineering} 71 (2025). DOI: 10.5545/sv-jme.2024.1249
+\end{vzorecreferenc}
+
+Za konferenčne prispevke:
+\begin{vzorecreferenc}
+\item K.~Žibert, G.~Turk \emph{et al.}: Eksperimentalna študija tokovnih razmer v modelu človeškega srca s pomožno srčno črpalko. V: B.~Harl, N.~Gubeljak (ur.): \emph{Kuhljevi dnevi 2025}. Ankaran, 2025, str.~142--151
+\item M.~C. Niculuţǎ, C.~Veje: Analysis of the thermal behavior of a LiFePO$_4$ battery cell. V: D.~Petit, C.~L. Nilliot (ur.): \emph{6th European Thermal Sciences Conference (Eurotherm 2012)}. Poitiers, 2012. DOI: 10.1088/1742-6596/395/1/012013
+\end{vzorecreferenc}
+
+Za spletne vire:
+\begin{vzorecreferenc}
+\item Gyroid. URL: \url{https://mathworld.wolfram.com/Gyroid.html}, ogled: 23. 12. 2025
+\item P.~Dawkins: Conjugate and Modulus. URL: \url{https://tutorial.math.lamar.edu/Extras/ComplexPrimer/ConjugateModulus.aspx}, ogled: 23. 12. 2025
+\end{vzorecreferenc}
+
+Za doktorske disertacije in druga zaključna dela:
+\begin{vzorecreferenc}
+\item A.~Žnidaršič: \emph{Izdelava avtomatiziranega stroja za lupljenje krompirja}. Doktorska disertacija. Fakulteta za strojništvo, Ljubljana, 2025
+\end{vzorecreferenc}
+
+Za publikacije organizacij:
+\begin{vzorecreferenc}
+\item Letno poročilo podjetja Merkur d.d. Kranj. Merkur d.d., Kranj, 2005
+\item Statistični letopis Republike Slovenije 2009. Statistični urad Republike Slovenije, Ljubljana, 2009
+\end{vzorecreferenc}
+
+Za zakonodajne predpise in standarde:
+\begin{vzorecreferenc}
+\item Zakon o gospodarskih družbah (ZGD-1). Uradni list RS št. 65/09
+\item ISO 690:2021. Information and documentation --- Guidelines for bibliographic references and citations to information resources. International Organization for Standardization, 2021
+\end{vzorecreferenc}

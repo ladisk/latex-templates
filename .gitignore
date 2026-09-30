@@ -1,3 +1,6 @@
+# Word templates
+/_word_templates/
+
 # LaTeX temporary files
 *.aux
 *.log

@@ -1,0 +1,28 @@
+% ta stran se zgenerira sama, za vhodne podatke uporabite podatki.tex
+
+
+\thispagestyle{empty}
+\AddToHookNext{shipout/foreground}{%
+	\begingroup
+	\linespread{1}\selectfont
+	\setlength{\parindent}{0pt}
+	\setlength{\parskip}{0pt}
+	% Višina osnovnice, velikost pisave, razmik vrstic, besedilo.
+	\newcommand{\platnicaPolje}[4]{%
+		\put(88.5bp,-#1bp){%
+			\parbox[t]{155mm}{\centering
+				\fontsize{#2bp}{#3bp}\selectfont #4\par}}}
+	
+	\platnicaPolje{98}{14}{18.6}{\textbf{UNIVERZA V LJUBLJANI}}
+	\platnicaPolje{130}{14}{18.6}{Fakulteta za strojništvo}
+	\platnicaPolje{319}{20}{26.5}{\textbf{\naslovSlo}}
+	\platnicaPolje{413}{14}{18.6}{\tipDela}
+	\platnicaPolje{524}{16}{21.2}{\textbf{\avtor}}
+	\platnicaPolje{650}{14}{21.5}{Mentor: \mentor
+	\par \if\relax\detokenize\expandafter{\somentor}\relax\else
+	Somentor: \somentor\par
+	\fi}
+	\platnicaPolje{753}{14}{18.6}{Ljubljana, \zagovorMesec~\zagovorLeto}
+	\endgroup
+}
+\null
